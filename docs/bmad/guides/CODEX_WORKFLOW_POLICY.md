@@ -90,6 +90,9 @@ For tasks classified as Minor Change:
 
 - do not create BMAD feature documentation
 - update `docs/bmad/notes/minor-changes.md`
+- every Minor Change MUST append a row to `docs/bmad/notes/minor-changes.md`
+- each row MUST include: Version, Date (YYYY-MM-DD), Scope, Short description, PR reference (if available)
+- if the log entry cannot be completed, stop and request clarification before proceeding
 - keep changes local and reversible
 
 ---

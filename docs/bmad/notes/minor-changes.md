@@ -88,6 +88,8 @@ Example: minor/security-scope-guide-update
 
 Make modifications only to the relevant docs/templates.
 
+Every Minor Change MUST append a row to the Minor Changes Log table in this document.
+
 ------------------------------------------------------------------------
 
 ### 3) Commit with Conventional Message
@@ -125,13 +127,11 @@ tag MAY be created (e.g., v1.0.1).
 ## Log of Minor Changes
 
 Use this section to record changes in chronological order.
-
-  --------------------------------------------------------------------------------------
-  Version   Date         Scope           Description                   PR / Tag
-  --------- ------------ --------------- ----------------------------- -----------------
-  v1.0.1    yyyy-mm-dd   versioning.md   Fixed truncated section       \#`<PR>`{=html}
-
-  --------------------------------------------------------------------------------------
+| Version | Date | Scope | Description | PR / Tag |
+|---|---|---|---|---|
+| v1.0.1 | yyyy-mm-dd | versioning.md | Fixed truncated section | #`<PR>`{=html} |
+| v1.1.0 | 2026-02-13 | minor-changes.md | Formalized minor governance definition. | N/A |
+| v1.2.0 | 2026-02-13 | SECURITY_SCOPE_GUIDE.md | Introduced SECURITY_SCOPE_GUIDE governance matrix. | N/A |
 
 ------------------------------------------------------------------------
 
