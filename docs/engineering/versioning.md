@@ -67,4 +67,29 @@ Must be:
 - Justified (short rationale).
 - Separated from feature work.
 
-Repository structure is part of the system co
+Repository structure is part of the system contract.
+
+---
+
+### 5. Automation
+
+If available:
+
+- Run lint/typecheck before commit.
+- Run local audit scripts (e.g. TypeScript audit).
+- Ensure CI would pass before pushing.
+
+Commits must not rely on CI to discover avoidable local issues.
+
+---
+
+### Principle
+
+A clean repository is a signal of engineering discipline.
+
+Commit hygiene is not cosmetic.
+It protects reproducibility, security, and long-term maintainability.
+
+### Version
+
+Initial baseline established at v1.0.0.
