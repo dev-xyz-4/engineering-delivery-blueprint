@@ -78,7 +78,7 @@ To qualify as a Minor Change, the update MUST:
 
 Use a descriptive branch name:
 
-minor/`<scope>`{=html}-`<brief-description>`{=html}
+minor/<scope>-<brief-description>
 
 Example: minor/security-scope-guide-update
 
@@ -127,11 +127,13 @@ tag MAY be created (e.g., v1.0.1).
 ## Log of Minor Changes
 
 Use this section to record changes in chronological order.
-| Version | Date | Scope | Description | PR / Tag |
+| Version | Date | Scope | Description | PR reference |
 |---|---|---|---|---|
-| v1.0.1 | yyyy-mm-dd | versioning.md | Fixed truncated section | #`<PR>`{=html} |
-| v1.1.0 | 2026-02-13 | minor-changes.md | Formalized minor governance definition. | N/A |
-| v1.2.0 | 2026-02-13 | SECURITY_SCOPE_GUIDE.md | Introduced SECURITY_SCOPE_GUIDE governance matrix. | N/A |
+| v1.0.1 | 2026-02-13 | versioning.md | Fixed truncated section. | tag: v1.0.1 |
+| v1.1.0 | 2026-02-13 | minor-changes.md | Formalized minor change governance definition. | #2 |
+| v1.2.0 | 2026-02-14 | SECURITY_SCOPE_GUIDE.md | Introduced SECURITY_SCOPE_GUIDE governance matrix. | tag: v1.2.0 |
+| v1.3.0 | 2026-02-14 | CODEX_WORKFLOW_POLICY.md, minor-changes.md, SECURITY_SCOPE_GUIDE_EMPTY.md | Governance enforcement and cleanup. | #5 |
+| v1.3.1 | 2026-02-13 | minor-changes.md | Log hygiene, formatting cleanup, PR reference normalization. |
 
 ------------------------------------------------------------------------
 
