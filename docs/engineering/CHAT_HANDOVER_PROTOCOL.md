@@ -106,7 +106,7 @@ Releases optional for PATCH, recommended for MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.8.12
+v1.8.13
 
 Governance Baseline Includes:
 
@@ -116,6 +116,7 @@ Governance Baseline Includes:
 - security.template.md
 - TESTING_SCOPE_GUIDE.md
 - VERSIONING_GUIDE.md
+- RELEASE_GUIDE.md
 - BRANCH_WORKFLOW.md
 - testing-strategy.template.md
 - Prompt templates in docs/bmad/templates (*.prompt.md)

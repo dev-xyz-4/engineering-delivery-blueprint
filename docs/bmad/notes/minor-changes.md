@@ -151,6 +151,7 @@ Use this section to record changes in chronological order.
 | v1.8.10 | 2026-02-14 | PR_HELPER_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Clarified staged-only prerequisite wording and explicit doctor PASS/WARN/FAIL exit semantics in PR helper documentation. | #<PR> |
 | v1.8.11 | 2026-02-14 | VERSIONING_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Replaced VERSIONING guide placeholder with formal scope-based versioning governance matrix and definitions. | #<PR> |
 | v1.8.12 | 2026-02-14 | BRANCH_WORKFLOW.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Added branch workflow SOP with non-negotiables, pr-helper happy path, and recovery procedures for main-branch mistakes. | #<PR> |
+| v1.8.13 | 2026-02-14 | RELEASE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Replaced RELEASE guide placeholder with formal scope-based release governance matrix and boundaries. | #<PR> |
 
 
 
