@@ -141,6 +141,7 @@ Use this section to record changes in chronological order.
 | v1.8.0 | 2026-02-14 | Prompt templates, LLM-bmad-briefing-template.md | Extracted BMAD prompt templates and standardized English briefing baseline. | #<PR> |
 | v1.8.1 | 2026-02-14 | LLM-bmad-briefing-template.md, minor-changes.md | Synchronized briefing template repository tree with current repo structure. | #<PR> |
 | v1.8.2 | 2026-02-14 | minor-changes.md | Added v1.8.2 log entry (patch: log completeness after v1.8.0 backfill). | #<PR> |
+| v1.8.3 | 2026-02-14 | CHAT_HANDOVER_PROTOCOL.md, minor-changes.md | Updated handover baseline to v1.8.2 and aligned governance inclusions. | #<PR> |
 
 
 
