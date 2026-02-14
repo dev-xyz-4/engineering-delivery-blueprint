@@ -44,7 +44,10 @@ scripts/quality/pr-helper.sh detect
 - `detect`:
   Print detected workflow-template mappings.
 - `doctor`:
-  Print environment/guardrail status (repo root, branch, git status, gh auth, workflow detection).
+  Print environment/guardrail status plus governance validation diagnostics.
+  Supports:
+  - `--workflow <workflow>`
+  - `--tag vX.Y.Z` (planned tag context)
 - `branch`:
   Create a workflow-aligned branch name (`minor/<slug>` or `feature/<slug>`).
 - `commit`:
@@ -89,6 +92,31 @@ scripts/quality/pr-helper.sh pr-create \
   --governance "<governance notes>" \
   --validation "<checks done / planned>"
 ```
+
+---
+
+## 5.1) Doctor Governance Checks
+
+Run before `pr-create`:
+```bash
+scripts/quality/pr-helper.sh doctor --workflow minor-change
+```
+
+For planned tagging/version finalization:
+```bash
+scripts/quality/pr-helper.sh doctor --workflow minor-change --tag vX.Y.Z
+```
+
+Checks performed:
+- For `--workflow minor-change`:
+  - Verifies `docs/bmad/notes/minor-changes.md` is modified/staged.
+- If `--tag` is provided or a version bump is detected in `minor-changes.md`:
+  - Verifies `docs/engineering/CHAT_HANDOVER_PROTOCOL.md` is modified.
+
+Diagnostic levels:
+- `PASS`: governance condition satisfied
+- `WARN`: recommended or contextual check not enforced
+- `FAIL`: required governance condition missing (doctor exits non-zero)
 
 ---
 
@@ -188,6 +216,9 @@ Error pattern:
 Resolution:
 - Commit/stash changes first, or use `--allow-dirty` only when intentionally required.
 
+Doctor behavior:
+- Usually reported as `WARN` in diagnostics mode.
+
 ### `gh` auth issues
 Error pattern:
 - `gh is not authenticated. Run: gh auth login`
@@ -198,6 +229,9 @@ gh auth login
 gh auth status
 ```
 
+Doctor behavior:
+- Reported as `WARN` until authenticated.
+
 ### Title validation failures
 Error pattern:
 - `PR title must match Conventional Commits format: <type>(<scope>): <summary>`
@@ -205,6 +239,19 @@ Error pattern:
 Resolution:
 - Ensure `--type`, `--scope`, and `--summary` are valid.
 - Keep `--summary` human-readable; do not prefix with `type(scope):`.
+
+### Governance check failures (doctor)
+Error patterns:
+- `FAIL: minor-change workflow: docs/bmad/notes/minor-changes.md is not modified/staged`
+- `FAIL: planned tag ... requires docs/engineering/CHAT_HANDOVER_PROTOCOL.md modification`
+- `FAIL: detected version bump requires docs/engineering/CHAT_HANDOVER_PROTOCOL.md modification`
+
+Resolution:
+- Update required governance documents before `pr-create`.
+- Re-run:
+```bash
+scripts/quality/pr-helper.sh doctor --workflow minor-change [--tag vX.Y.Z]
+```
 
 ### Squash title drift (historical)
 Historical risk:

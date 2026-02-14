@@ -167,7 +167,7 @@ print_help() {
 Usage:
   pr-helper.sh help
   pr-helper.sh detect
-  pr-helper.sh doctor
+  pr-helper.sh doctor [--workflow <workflow>] [--tag vX.Y.Z]
 
   pr-helper.sh branch --workflow <workflow> --slug <slug> [--allow-dirty]
   pr-helper.sh commit --workflow <workflow> [--type <type>] [--scope <scope>] (--subject <text> | --message <msg>) [--allow-dirty]
@@ -185,6 +185,8 @@ Workflows:
   - minor-change
 
 Examples:
+  pr-helper.sh doctor --workflow minor-change
+  pr-helper.sh doctor --workflow minor-change --tag v1.8.8
   pr-helper.sh branch --workflow minor-change --slug handover-baseline-sync
   pr-helper.sh commit --workflow minor-change --subject "sync handover baseline"
   pr-helper.sh push
@@ -202,26 +204,104 @@ Examples:
 USAGE
 }
 
+DOCTOR_FAIL_COUNT=0
+
+doctor_pass() {
+  log "PASS: $*"
+}
+
+doctor_warn() {
+  log "WARN: $*"
+}
+
+doctor_fail() {
+  log "FAIL: $*"
+  DOCTOR_FAIL_COUNT=$((DOCTOR_FAIL_COUNT + 1))
+}
+
+file_is_modified_or_staged() {
+  local path="$1"
+  [[ -n "$(git status --porcelain -- "$path")" ]]
+}
+
+minor_log_version_bump_detected() {
+  git diff -- docs/bmad/notes/minor-changes.md | grep -Eq '^\+\| v[0-9]+\.[0-9]+\.[0-9]+ \|'
+}
+
 run_doctor() {
+  local wf="" planned_tag=""
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --workflow) wf="$2"; shift 2 ;;
+      --tag) planned_tag="$2"; shift 2 ;;
+      *) err "unknown option for doctor: $1"; exit 1 ;;
+    esac
+  done
+
+  DOCTOR_FAIL_COUNT=0
+
   log "Repo root: $REPO_ROOT"
   log "Current branch: $(git rev-parse --abbrev-ref HEAD)"
   if [[ -n "$(git status --porcelain)" ]]; then
-    log "Git status: DIRTY"
+    doctor_warn "git working tree is DIRTY"
   else
-    log "Git status: CLEAN"
+    doctor_pass "git working tree is CLEAN"
   fi
 
   if command -v gh >/dev/null 2>&1; then
     if gh auth status >/dev/null 2>&1; then
-      log "gh: installed and authenticated"
+      doctor_pass "gh is installed and authenticated"
     else
-      log "gh: installed but NOT authenticated"
+      doctor_warn "gh is installed but NOT authenticated"
     fi
   else
-    log "gh: NOT installed"
+    doctor_warn "gh is NOT installed"
   fi
 
   print_template_detection
+
+  if [[ -n "$wf" ]]; then
+    require_workflow "$wf"
+  fi
+
+  log "Governance diagnostics:"
+
+  if [[ "$wf" == "minor-change" ]]; then
+    if file_is_modified_or_staged "docs/bmad/notes/minor-changes.md"; then
+      doctor_pass "minor-change workflow: docs/bmad/notes/minor-changes.md is modified/staged"
+    else
+      doctor_fail "minor-change workflow: docs/bmad/notes/minor-changes.md is not modified/staged"
+    fi
+  else
+    doctor_warn "minor-change governance check skipped (use --workflow minor-change to enforce)"
+  fi
+
+  local version_bump_detected="false"
+  if minor_log_version_bump_detected; then
+    version_bump_detected="true"
+    doctor_warn "version bump detected in docs/bmad/notes/minor-changes.md"
+  else
+    doctor_pass "no version bump detected in docs/bmad/notes/minor-changes.md"
+  fi
+
+  if [[ -n "$planned_tag" || "$version_bump_detected" == "true" ]]; then
+    if file_is_modified_or_staged "docs/engineering/CHAT_HANDOVER_PROTOCOL.md"; then
+      doctor_pass "version/tag governance: docs/engineering/CHAT_HANDOVER_PROTOCOL.md is modified"
+    else
+      if [[ -n "$planned_tag" ]]; then
+        doctor_fail "planned tag '$planned_tag' requires docs/engineering/CHAT_HANDOVER_PROTOCOL.md modification"
+      else
+        doctor_fail "detected version bump requires docs/engineering/CHAT_HANDOVER_PROTOCOL.md modification"
+      fi
+    fi
+  else
+    doctor_warn "handover update check skipped (no --tag and no detected version bump)"
+  fi
+
+  if [[ "$DOCTOR_FAIL_COUNT" -gt 0 ]]; then
+    err "doctor found $DOCTOR_FAIL_COUNT FAIL condition(s)."
+    exit 1
+  fi
 }
 
 cmd_branch() {
@@ -497,7 +577,7 @@ main() {
   case "$cmd" in
     help|-h|--help) print_help ;;
     detect) print_template_detection ;;
-    doctor) run_doctor ;;
+    doctor) run_doctor "$@" ;;
     branch) cmd_branch "$@" ;;
     commit) cmd_commit "$@" ;;
     push) cmd_push "$@" ;;
