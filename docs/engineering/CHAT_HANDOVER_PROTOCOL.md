@@ -106,17 +106,18 @@ Releases optional for PATCH, recommended for MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.7.1
+v1.8.3
 
 Governance Baseline Includes:
 
-- Minor Change governance formalized
-- Mandatory Minor log enforcement
-- SECURITY_SCOPE_GUIDE
+- Minor Change governance formalized (policy-backed)
+- Mandatory Minor log enforcement (policy-backed)
+- SECURITY_SCOPE_GUIDE.md
 - security.template.md
-- TESTING_SCOPE_GUIDE
+- TESTING_SCOPE_GUIDE.md
 - testing-strategy.template.md
-- Clean placeholder removals
+- Prompt templates in docs/bmad/templates (*.prompt.md)
+- LLM-bmad-briefing-template.md repository tree sync
 - Branch protection enabled
 - PR-based workflow verified
 - CHAT_HANDOVER_PROTOCOL
