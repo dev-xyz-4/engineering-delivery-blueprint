@@ -23,14 +23,16 @@ documented, not inferred
 
 ## 2) Relevant Repository Structure
 
+Engineering layer lists representative examples only; consult the directory for the full set of governance docs.
+
 ``` text
 docs/
   00-project/
-    project-overview.md
-    project-scope.md
-    risk-profile.md
-    architecture-overview.md
-    glossary.md
+    project-overview_EMPTY.md
+    project-scope_EMPTY.md
+    risk-profile_EMPTY.md
+    architecture-overview_EMPTY.md
+    glossary_EMPTY.md
 
   bmad/
     README.md
@@ -47,15 +49,20 @@ docs/
       model.template.md
       analyze.template.md
       deliver.template.md
+      minor-change.prompt.md
+      feature-implementation.prompt.md
+      documentation-only.prompt.md
     notes/
       minor-changes.md
       open-questions.md
       rejected-approaches.md
       decisions-log.md
       architecture-divergences.md
+      ts-errors-template.md
       <optional-project-note>.md
     features/
-      <feature-slug>/
+      .keep
+      <feature-slug>/  # example; created as needed
         01-break.md
         02-model.md
         03-analyze.md
