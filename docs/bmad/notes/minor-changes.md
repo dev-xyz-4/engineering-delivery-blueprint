@@ -134,6 +134,7 @@ Use this section to record changes in chronological order.
 | v1.2.0 | 2026-02-14 | SECURITY_SCOPE_GUIDE.md | Introduced SECURITY_SCOPE_GUIDE governance matrix. | tag: v1.2.0 |
 | v1.3.0 | 2026-02-14 | CODEX_WORKFLOW_POLICY.md, minor-changes.md, SECURITY_SCOPE_GUIDE_EMPTY.md | Governance enforcement and cleanup. | #5 |
 | v1.3.1 | 2026-02-13 | minor-changes.md | Log hygiene, formatting cleanup, PR reference normalization. |
+| v1.4.0 | 2026-02-14 | security.template.md | Added structured security policy template aligned with SECURITY_SCOPE_GUIDE. | #<PR> |
 
 ------------------------------------------------------------------------
 
