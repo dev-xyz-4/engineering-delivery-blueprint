@@ -1,6 +1,6 @@
 # SECURITY_SCOPE_GUIDE
 
-## 1) Purpose And Scope
+## Purpose
 
 This document defines normative security governance scope for this repository.
 It standardizes how security depth is classified by project type and risk profile.
@@ -17,7 +17,15 @@ This guide does not define implementation automation, CI policies, or technical 
 
 ---
 
-## 2) Project Type Classification
+## Design Principle
+
+Security depth is selected according to project type and risk profile.
+
+If multiple project types apply, use the higher-risk type.
+
+---
+
+## Project Classification Matrix
 
 Use canonical terminology from `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
@@ -28,34 +36,17 @@ Use the closest primary project type:
 - `Public Web Application`: internet-facing application with user traffic.
 - `Web3 / Financial-Sensitive Application`: systems with blockchain integrations, financial transactions, or regulatory-sensitive operations.
 
-If multiple types apply, use the higher-risk type.
-
 ---
 
-## 3) Security Level Matrix
+## Requirement Dimensions
 
-### 3.1 Level Definitions
+### Security Levels
 
 - `Minimal`: baseline controls for low exposure and low impact.
 - `Standard`: default controls for public/user-facing production systems.
 - `Extended`: high-assurance controls for high-impact or high-risk systems.
 
-### 3.2 Baseline Mapping By Project Type
-
-| Project Type | Default Level |
-|---|---|
-| Local Tool | Minimal |
-| Desktop Application | Standard |
-| Public Web Application | Standard |
-| Web3 / Financial-Sensitive Application | Extended |
-
-Escalate above default when triggers in section 5 are present.
-
----
-
-## 4) Required Security Controls By Level
-
-### 4.1 Control Categories
+### Security Control Categories
 
 Required categories for every level:
 All control categories apply at all levels; depth varies by level.
@@ -66,7 +57,22 @@ All control categories apply at all levels; depth varies by level.
 - Logging & monitoring
 - Release integrity
 
-### 4.2 Required Depth By Level
+---
+
+## Requirement Matrix
+
+### Baseline Mapping By Project Type
+
+| Project Type | Default Level |
+|---|---|
+| Local Tool | Minimal |
+| Desktop Application | Standard |
+| Public Web Application | Standard |
+| Web3 / Financial-Sensitive Application | Extended |
+
+Escalate above default when triggers in Requirement Definitions are present.
+
+### Required Depth By Level
 
 | Control Category | Minimal | Standard | Extended |
 |---|---|---|---|
@@ -79,7 +85,9 @@ All control categories apply at all levels; depth varies by level.
 
 ---
 
-## 5) Escalation Criteria Between Levels
+## Requirement Definitions
+
+### Escalation Criteria Between Levels
 
 Escalate from `Minimal` to `Standard` when one or more applies:
 - internet exposure is introduced
@@ -95,9 +103,7 @@ Escalate from `Standard` to `Extended` when one or more applies:
 
 De-escalation requires explicit rationale and risk acceptance.
 
----
-
-## 6) Classification Examples
+### Classification Examples
 
 - Local CLI helper, no remote interface, no secrets at runtime -> `Minimal`
 - Public SaaS dashboard with user accounts and APIs -> `Standard`
@@ -116,3 +122,9 @@ This guide:
 - MUST NOT introduce new workflows or enforcement mechanisms.
 - MUST NOT mandate vendors, tools, or specific implementations.
 - MUST NOT modify BMAD Feature governance.
+
+---
+
+## Version
+
+Initial baseline established at v1.0.0.

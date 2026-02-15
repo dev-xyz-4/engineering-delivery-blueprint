@@ -106,7 +106,7 @@ Releases optional for PATCH, recommended for MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.11.3
+v1.11.4
 
 Governance Baseline Includes:
 

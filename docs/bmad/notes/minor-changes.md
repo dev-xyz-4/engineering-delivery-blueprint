@@ -158,6 +158,7 @@ Use this section to record changes in chronological order.
 | v1.11.1 | 2026-02-15 | PROJECT_CLASSIFICATION.md, SECURITY_SCOPE_GUIDE.md, TESTING_SCOPE_GUIDE.md, minor-changes.md | Introduced canonical Engineering project taxonomy and aligned Security/Testing guide terminology without changing depth-model semantics. | #<PR> |
 | v1.11.2 | 2026-02-15 | GOVERNANCE_MODEL.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Introduced meta-governance clarification for Compliance vs Depth models and formalized interoperability rule. | #<PR> |
 | v1.11.3 | 2026-02-15 | SECURITY_SCOPE_GUIDE.md, TESTING_SCOPE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Harmonized Governance Boundary wording in Security and Testing scope guides to Engineering baseline standard. | #<PR> |
+| v1.11.4 | 2026-02-15 | SECURITY_SCOPE_GUIDE.md, TESTING_SCOPE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Harmonized Security/Testing section model to the standard scope-guide structure without changing matrices or depth-model semantics. | #<PR> |
 
 
 
