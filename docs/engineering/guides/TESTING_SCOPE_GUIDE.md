@@ -1,6 +1,6 @@
 # TESTING_SCOPE_GUIDE
 
-## 1) Purpose And Scope
+## Purpose
 
 This document defines normative testing governance scope for this repository.
 It standardizes testing depth by project type and risk profile.
@@ -16,7 +16,15 @@ This guide does not define tooling setup, CI mandates, or enforcement automation
 
 ---
 
-## 2) Project Type Classification
+## Design Principle
+
+Testing depth is selected according to project type and risk profile.
+
+If multiple project types apply, use the higher-risk type.
+
+---
+
+## Project Classification Matrix
 
 Use canonical terminology from `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
@@ -27,19 +35,33 @@ Use the closest primary project type:
 - `Public Web Application`: internet-facing application with user traffic.
 - `Web3 / Financial-Sensitive Application`: systems with blockchain integrations, financial transactions, or regulatory-sensitive operations.
 
-If multiple types apply, use the higher-risk type.
-
 ---
 
-## 3) Testing Levels Model
+## Requirement Dimensions
+
+### Testing Levels Model
 
 - `Minimal`: baseline confidence for low exposure and low impact.
 - `Standard`: default depth for user-facing production systems.
 - `Extended`: high-assurance depth for high-impact or high-risk systems.
 
+### Testing Categories
+
+All testing categories apply at all levels; depth varies by level.
+
+- Unit tests
+- Integration tests
+- Contract/API tests (where applicable)
+- E2E tests (where applicable)
+- Manual/exploratory testing
+- Regression strategy
+- Test data & environments (governance level)
+
 ---
 
-## 4) Baseline Mapping By Project Type
+## Requirement Matrix
+
+### Baseline Mapping By Project Type
 
 | Project Type | Default Level |
 |---|---|
@@ -48,13 +70,9 @@ If multiple types apply, use the higher-risk type.
 | Public Web Application | Standard |
 | Web3 / Financial-Sensitive Application | Extended |
 
-Escalate above default when triggers in section 7 are present.
+Escalate above default when triggers in Requirement Definitions are present.
 
----
-
-## 5) Required Testing Categories By Level
-
-All testing categories apply at all levels; depth varies by level.
+### Required Testing Categories By Level
 
 | Testing Category | Minimal | Standard | Extended |
 |---|---|---|---|
@@ -68,23 +86,23 @@ All testing categories apply at all levels; depth varies by level.
 
 ---
 
-## 6) Entry/Exit Criteria Guidance
+## Requirement Definitions
 
-### Entry Criteria (high-level)
+### Entry/Exit Criteria Guidance
+
+#### Entry Criteria (high-level)
 
 - Scope and risk profile are documented.
 - Target testing level is selected and justified.
 - Relevant testing categories are mapped to scope.
 
-### Exit Criteria (high-level)
+#### Exit Criteria (high-level)
 
 - Required checks for the selected level are completed.
 - Known residual risks are documented and accepted by owner.
 - Regression expectations are satisfied for changed scope.
 
----
-
-## 7) Escalation Triggers And Examples
+### Escalation Triggers And Examples
 
 Escalate from `Minimal` to `Standard` when one or more applies:
 - internet exposure is introduced
@@ -116,3 +134,9 @@ This guide:
 - MUST NOT introduce new workflows or enforcement mechanisms.
 - MUST NOT mandate vendors, tools, or specific implementations.
 - MUST NOT modify BMAD Feature governance.
+
+---
+
+## Version
+
+Initial baseline established at v1.0.0.
