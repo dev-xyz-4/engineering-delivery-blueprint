@@ -154,6 +154,7 @@ Use this section to record changes in chronological order.
 | v1.8.13 | 2026-02-14 | RELEASE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Replaced RELEASE guide placeholder with formal scope-based release governance matrix and boundaries. | #<PR> |
 | v1.9.0 | 2026-02-14 | adr.template.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Replaced ADR template placeholder with formal reusable ADR template and consolidated governance baseline to v1.9.0. | #<PR> |
 | v1.10.0 | 2026-02-15 | PERFORMANCE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Replaced PERFORMANCE guide placeholder with formal scope-based performance governance matrix and consolidated baseline to v1.10.0. | #<PR> |
+| v1.11.0 | 2026-02-15 | OBSERVABILITY_SCOPE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Introduced formal scope-based observability governance guide and consolidated baseline to v1.11.0. | #<PR> |
 
 
 
