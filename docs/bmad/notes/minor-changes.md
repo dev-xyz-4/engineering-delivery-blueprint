@@ -161,6 +161,7 @@ Use this section to record changes in chronological order.
 | v1.11.4 | 2026-02-15 | SECURITY_SCOPE_GUIDE.md, TESTING_SCOPE_GUIDE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Harmonized Security/Testing section model to the standard scope-guide structure without changing matrices or depth-model semantics. | #<PR> |
 | v1.11.5 | 2026-02-15 | PROJECT_CLASSIFICATION.md, security.template.md, testing-strategy.template.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Standardized legacy project-type terminology to canonical names across engineering guides/templates. | #<PR> |
 | v1.11.6 | 2026-02-15 | minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Backfilled missing v1.3.1 PR reference field with explicit historical N/A annotation. | #<PR> |
+| v1.11.7 | 2026-02-15 | ENGINEERING_BASELINE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Finalized Phase-1 Engineering Governance Baseline declaration alignment and versioned governance handover state. | #<PR> |
 
 
 
