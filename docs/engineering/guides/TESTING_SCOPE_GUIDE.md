@@ -18,13 +18,14 @@ This guide does not define tooling setup, CI mandates, or enforcement automation
 
 ## 2) Project Type Classification
 
+Use canonical terminology from `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
+
 Use the closest primary project type:
 
 - `Local Tool`: local-only utility with no external user exposure.
-- `Desktop App`: distributed client application with limited remote surface.
-- `Public Web App`: internet-facing application with user traffic.
-- `Web3 App`: blockchain-integrated app with wallet/signing interactions.
-- `Financial-Critical App`: systems handling high-impact financial operations.
+- `Desktop Application`: distributed client application with limited remote surface.
+- `Public Web Application`: internet-facing application with user traffic.
+- `Web3 / Financial-Sensitive Application`: systems with blockchain integrations, financial transactions, or regulatory-sensitive operations.
 
 If multiple types apply, use the higher-risk type.
 
@@ -43,10 +44,9 @@ If multiple types apply, use the higher-risk type.
 | Project Type | Default Level |
 |---|---|
 | Local Tool | Minimal |
-| Desktop App | Standard |
-| Public Web App | Standard |
-| Web3 App | Extended |
-| Financial-Critical App | Extended |
+| Desktop Application | Standard |
+| Public Web Application | Standard |
+| Web3 / Financial-Sensitive Application | Extended |
 
 Escalate above default when triggers in section 7 are present.
 
