@@ -106,7 +106,7 @@ Releases optional for PATCH, recommended for MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.8.13
+v1.9.0
 
 Governance Baseline Includes:
 
@@ -120,6 +120,7 @@ Governance Baseline Includes:
 - BRANCH_WORKFLOW.md
 - testing-strategy.template.md
 - Prompt templates in docs/bmad/templates (*.prompt.md)
+- adr.template.md
 - LLM-bmad-briefing-template.md repository tree sync
 - Repository governance documentation standardized to English
 - PR helper CLI for standardized workflow execution (branch/commit/PR/merge/sync/tag)
