@@ -108,10 +108,11 @@ If uncertain, choose the higher level and document rationale.
 
 ---
 
-## 7) Governance Boundaries
+## Governance Boundary
 
-This document is governance-only.
+This guide:
 
-- It defines scope and minimum control expectations.
-- It does not mandate CI jobs, automation tooling, or enforcement implementation.
-- Enforcement, operational controls, and automation are defined in separate engineering/security operations artifacts.
+- MUST NOT override project-level decisions documented in instance documents (e.g., `docs/engineering/security.md`, `docs/engineering/testing.md`).
+- MUST NOT introduce new workflows or enforcement mechanisms.
+- MUST NOT mandate vendors, tools, or specific implementations.
+- MUST NOT modify BMAD Feature governance.
