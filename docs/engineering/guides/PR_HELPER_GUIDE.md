@@ -108,11 +108,44 @@ For planned tagging/version finalization:
 scripts/quality/pr-helper.sh doctor --workflow minor-change --tag vX.Y.Z
 ```
 
+### Mode-Aware Enforcement
+
+`doctor` resolves mode before governance checks:
+
+- Project Mode (default):
+  - Active when neither `EDB_MODE=1` nor `.planning/EDB_MODE` is present.
+  - Targets:
+    - `docs/bmad/notes/minor-change-log.md`
+    - `docs/engineering/chat-handover-protocol.md`
+    - `docs/engineering/engineering-baseline.md`
+
+- EDB Mode (blueprint development):
+  - Active when `EDB_MODE=1` is set or `.planning/EDB_MODE` exists.
+  - Targets:
+    - `docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md`
+    - `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`
+    - `docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md`
+
 Checks performed:
+- Verifies mode target files are present.
 - For `--workflow minor-change`:
-  - Verifies `docs/bmad/notes/minor-change-log.md` is modified/staged.
-- If `--tag` is provided or a version bump is detected in `docs/bmad/notes/minor-change-log.md`:
-  - Verifies `docs/engineering/chat-handover-protocol.md` is modified.
+  - Verifies mode-specific minor-change log is modified/staged.
+- If `--tag` is provided or a version bump is detected in the mode-specific log:
+  - Verifies mode-specific chat-handover document is modified.
+  - Evaluates mode-specific engineering baseline document (warning-level if unchanged).
+
+Examples:
+```bash
+# Default Project Mode
+scripts/quality/pr-helper.sh doctor --workflow minor-change
+
+# Explicit EDB Mode via env
+EDB_MODE=1 scripts/quality/pr-helper.sh doctor --workflow minor-change
+
+# EDB Mode via local marker file
+touch .planning/EDB_MODE
+scripts/quality/pr-helper.sh doctor --workflow minor-change
+```
 
 Diagnostic levels:
 - `PASS`: governance condition satisfied
@@ -266,9 +299,10 @@ Resolution:
 
 ### Governance check failures (doctor)
 Error patterns:
-- `FAIL: minor-change workflow: docs/bmad/notes/minor-change-log.md is not modified/staged`
-- `FAIL: planned tag ... requires docs/engineering/chat-handover-protocol.md modification`
-- `FAIL: detected version bump requires docs/engineering/chat-handover-protocol.md modification`
+- `FAIL: minor-change workflow (Project Mode): docs/bmad/notes/minor-change-log.md is not modified/staged`
+- `FAIL: minor-change workflow (EDB Mode): docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md is not modified/staged`
+- `FAIL: planned tag ... requires <mode-specific chat-handover path> modification`
+- `FAIL: detected version bump requires <mode-specific chat-handover path> modification`
 
 Resolution:
 - Update required governance documents before `pr-create`.

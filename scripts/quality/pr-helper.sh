@@ -12,6 +12,27 @@ cd "$REPO_ROOT"
 
 TEMPLATE_DIR="docs/bmad/templates"
 
+# Mode-aware governance routing:
+# - Project Mode (default): downstream live docs
+# - EDB Mode: blueprint self-history docs
+MODE="project"
+# .planning/EDB_MODE is expected to be gitignored (local development only)
+if [[ "${EDB_MODE:-0}" == "1" || -f ".planning/EDB_MODE" ]]; then
+  MODE="edb"
+fi
+
+if [[ "$MODE" == "edb" ]]; then
+  MODE_LABEL="EDB Mode"
+  MINOR_LOG_PATH="docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md"
+  HANDOVER_PATH="docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md"
+  BASELINE_PATH="docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md"
+else
+  MODE_LABEL="Project Mode"
+  MINOR_LOG_PATH="docs/bmad/notes/minor-change-log.md"
+  HANDOVER_PATH="docs/engineering/chat-handover-protocol.md"
+  BASELINE_PATH="docs/engineering/engineering-baseline.md"
+fi
+
 log() {
   printf '%s\n' "$*"
 }
@@ -187,13 +208,14 @@ Workflows:
 Examples:
   pr-helper.sh doctor --workflow minor-change
   pr-helper.sh doctor --workflow minor-change --tag v1.8.8
+  EDB_MODE=1 pr-helper.sh doctor --workflow minor-change
   pr-helper.sh branch --workflow minor-change --slug handover-baseline-sync
   pr-helper.sh commit --workflow minor-change --subject "sync handover baseline"
   pr-helper.sh push
   pr-helper.sh pr-create --workflow minor-change --type docs --scope governance \
     --summary "align handover baseline with latest patch state" \
     --rationale "prevent drift between handover and minor-change log" \
-    --files "docs/engineering/CHAT_HANDOVER_PROTOCOL.md,docs/bmad/notes/minor-changes.md" \
+    --files "docs/engineering/chat-handover-protocol.md,docs/bmad/notes/minor-change-log.md" \
     --out-of-scope "no governance policy changes" \
     --versioning "PATCH expected (documentation hygiene only)" \
     --governance "minor log updated; handover baseline synchronized" \
@@ -225,7 +247,7 @@ file_is_modified_or_staged() {
 }
 
 minor_log_version_bump_detected() {
-  git diff -- docs/bmad/notes/minor-changes.md | grep -Eq '^\+\| v[0-9]+\.[0-9]+\.[0-9]+ \|'
+  git diff -- "$MINOR_LOG_PATH" | grep -Eq '^\+\| v[0-9]+\.[0-9]+\.[0-9]+ \|'
 }
 
 run_doctor() {
@@ -241,6 +263,11 @@ run_doctor() {
   DOCTOR_FAIL_COUNT=0
 
   log "Repo root: $REPO_ROOT"
+  log "Mode: $MODE_LABEL"
+  log "Mode targets: log=$MINOR_LOG_PATH handover=$HANDOVER_PATH baseline=$BASELINE_PATH"
+  if [[ "$MODE" == "edb" && ! -d ".planning" ]]; then
+    doctor_warn "EDB_MODE active but .planning directory missing."
+  fi
   log "Current branch: $(git rev-parse --abbrev-ref HEAD)"
   if [[ -n "$(git status --porcelain)" ]]; then
     doctor_warn "git working tree is DIRTY"
@@ -266,11 +293,27 @@ run_doctor() {
 
   log "Governance diagnostics:"
 
+  if [[ -f "$MINOR_LOG_PATH" ]]; then
+    doctor_pass "mode target exists: $MINOR_LOG_PATH"
+  else
+    doctor_fail "mode target missing: $MINOR_LOG_PATH"
+  fi
+  if [[ -f "$HANDOVER_PATH" ]]; then
+    doctor_pass "mode target exists: $HANDOVER_PATH"
+  else
+    doctor_fail "mode target missing: $HANDOVER_PATH"
+  fi
+  if [[ -f "$BASELINE_PATH" ]]; then
+    doctor_pass "mode target exists: $BASELINE_PATH"
+  else
+    doctor_warn "mode target missing (optional in some repositories): $BASELINE_PATH"
+  fi
+
   if [[ "$wf" == "minor-change" ]]; then
-    if file_is_modified_or_staged "docs/bmad/notes/minor-changes.md"; then
-      doctor_pass "minor-change workflow: docs/bmad/notes/minor-changes.md is modified/staged"
+    if file_is_modified_or_staged "$MINOR_LOG_PATH"; then
+      doctor_pass "minor-change workflow ($MODE_LABEL): $MINOR_LOG_PATH is modified/staged"
     else
-      doctor_fail "minor-change workflow: docs/bmad/notes/minor-changes.md is not modified/staged"
+      doctor_fail "minor-change workflow ($MODE_LABEL): $MINOR_LOG_PATH is not modified/staged"
     fi
   else
     doctor_warn "minor-change governance check skipped (use --workflow minor-change to enforce)"
@@ -279,19 +322,26 @@ run_doctor() {
   local version_bump_detected="false"
   if minor_log_version_bump_detected; then
     version_bump_detected="true"
-    doctor_warn "version bump detected in docs/bmad/notes/minor-changes.md"
+    doctor_warn "version bump detected in $MINOR_LOG_PATH"
   else
-    doctor_pass "no version bump detected in docs/bmad/notes/minor-changes.md"
+    doctor_pass "no version bump detected in $MINOR_LOG_PATH"
   fi
 
   if [[ -n "$planned_tag" || "$version_bump_detected" == "true" ]]; then
-    if file_is_modified_or_staged "docs/engineering/CHAT_HANDOVER_PROTOCOL.md"; then
-      doctor_pass "version/tag governance: docs/engineering/CHAT_HANDOVER_PROTOCOL.md is modified"
+    if file_is_modified_or_staged "$HANDOVER_PATH"; then
+      doctor_pass "version/tag governance ($MODE_LABEL): $HANDOVER_PATH is modified"
     else
       if [[ -n "$planned_tag" ]]; then
-        doctor_fail "planned tag '$planned_tag' requires docs/engineering/CHAT_HANDOVER_PROTOCOL.md modification"
+        doctor_fail "planned tag '$planned_tag' requires $HANDOVER_PATH modification ($MODE_LABEL)"
       else
-        doctor_fail "detected version bump requires docs/engineering/CHAT_HANDOVER_PROTOCOL.md modification"
+        doctor_fail "detected version bump requires $HANDOVER_PATH modification ($MODE_LABEL)"
+      fi
+    fi
+    if [[ -f "$BASELINE_PATH" ]]; then
+      if file_is_modified_or_staged "$BASELINE_PATH"; then
+        doctor_pass "version/tag context ($MODE_LABEL): $BASELINE_PATH is modified"
+      else
+        doctor_warn "version/tag context ($MODE_LABEL): $BASELINE_PATH not modified"
       fi
     fi
   else
