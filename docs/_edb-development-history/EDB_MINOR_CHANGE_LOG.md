@@ -166,6 +166,8 @@ Use this section to record changes in chronological order.
 | v1.11.9 | 2026-02-16 | README.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Refined README positioning to explicitly highlight CODEX-driven workflow framing under Engineering Delivery Blueprint (EDB) identity. | #<PR> |
 | v1.11.10 | 2026-02-16 | docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md, docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md, docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md, docs/bmad/templates/minor-change-log.template.md, docs/engineering/templates/chat-handover.template.md, docs/engineering/templates/engineering-baseline.template.md, docs/bmad/notes/minor-change-log.md, docs/engineering/chat-handover-protocol.md, docs/engineering/engineering-baseline.md, docs/bmad/guides/*, docs/bmad/templates/*.prompt.md, docs/engineering/guides/* | Separated EDB self-history documents from reusable governance areas, added neutral templates, and restored downstream live docs + routing references to canonical lowercase paths. | #<PR> |
 | v1.11.11 | 2026-02-16 | docs/bmad/guides/CODEX_ENTRY.md, docs/bmad/templates/minor-change.prompt.md, docs/bmad/templates/feature-implementation.prompt.md | Introduced explicit mode-aware routing (Project Mode vs EDB Mode) and aligned prompt templates to delegate canonical log and handover targets via CODEX_ENTRY.md. | #<PR> |
+| v1.11.12 | 2026-02-16 | scripts/quality/pr-helper.sh, docs/engineering/guides/PR_HELPER_GUIDE.md | Added mode-aware enforcement logic (Project Mode vs EDB Mode) to pr-helper doctor, including marker/ENV detection and mode-specific validation paths. | #<PR> |
+
 
 
 
