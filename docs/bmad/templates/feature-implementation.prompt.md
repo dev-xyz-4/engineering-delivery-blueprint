@@ -19,6 +19,13 @@ Problem:
 - <problem-point-2>
 - <problem-point-3>
 
+SemVer Decision (required):
+- SemVer Decision: `<SemVer PATCH | SemVer MINOR | SemVer MAJOR | no SemVer change>`
+- Rationale:
+  - `<rationale-point-1>`
+  - `<rationale-point-2>`
+- Planned tag: `<vX.Y.Z | N/A>`
+
 Expected behavior (binding):
 
 A) <contract-block-a>
@@ -74,9 +81,10 @@ Rules (strict):
 - Do not degrade performance characteristics defined in deliver acceptance criteria.
 - Use `Minor Change (workflow)` terminology for workflow classification.
 - `Minor Change (workflow)` is not the same as `SemVer MINOR`.
+- Namespace clarifier: workflow classification uses `Minor Change (workflow)` / `BMAD Feature`; version classification uses `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`.
 - Declare an explicit version decision: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` / `no SemVer change`.
-- Append a mandatory entry to the canonical Minor Change (workflow) log according to the active mode (see CODEX_ENTRY.md) for any Minor adjustments done as part of this implementation (docs/process hygiene only).
-- If version changes or governance baseline changes, update the canonical chat-handover document according to the active mode (see CODEX_ENTRY.md).
+- Always append a mandatory entry to the canonical Minor Change (workflow) log according to the active mode (see CODEX_ENTRY.md) for any Minor adjustments done as part of this implementation (docs/process hygiene only).
+- If planned tag is not `N/A` or the SemVer decision is not `no SemVer change`, update the canonical chat-handover document according to the active mode (see CODEX_ENTRY.md).
 - If repository structure or workflow templates are affected, update:
   - docs/bmad/notes/LLM-bmad-briefing-template.md (Repro structure / Feature status sections) as needed.
 

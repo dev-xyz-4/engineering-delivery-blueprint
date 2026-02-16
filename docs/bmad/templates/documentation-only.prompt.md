@@ -29,6 +29,8 @@ Constraints:
 - Do not write implementation code.
 - Do not modify repository structure.
 - Do not modify governance documents unless explicitly instructed.
+- Namespace clarifier: workflow classification uses `Minor Change (workflow)` / `BMAD Feature`; version classification uses `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`.
+- If this documentation-only change triggers version/tagging expectations, capture an explicit SemVer decision (`SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` / `no SemVer change`) and follow canonical log/handover routing via CODEX_ENTRY.md.
 
 Unknowns must be appended to:
 - docs/bmad/features/<feature-slug>/questions.md
@@ -37,4 +39,3 @@ If the break introduces structural implications (e.g., new workflow categories, 
 - Stop and request clarification before proceeding.
 
 ```
-

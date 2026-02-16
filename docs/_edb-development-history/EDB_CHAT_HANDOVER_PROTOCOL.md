@@ -106,7 +106,7 @@ Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.11.13
+v1.11.14
 
 Governance Baseline Includes:
 
@@ -140,6 +140,7 @@ Governance Baseline Includes:
 - PR helper commit corrected to staged-only behavior with explicit unstaged/no-staged failure conditions
 - PR_HELPER_GUIDE clarified staged-only prerequisites and explicit doctor exit semantics
 - Terminology separation clarified: Minor Change (workflow) vs SemVer PATCH/MINOR/MAJOR
+- BMAD implementation prompts require explicit SemVer Decision, rationale, planned tag, and decision-bound canonical log/handover updates via CODEX_ENTRY routing
 - Branch protection enabled
 - PR-based workflow verified
 - Self-history/template separation for handover, baseline, and minor-change log
