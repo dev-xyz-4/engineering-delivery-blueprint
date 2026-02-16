@@ -217,7 +217,7 @@ Examples:
     --rationale "prevent drift between handover and minor-change log" \
     --files "docs/engineering/chat-handover-protocol.md,docs/bmad/notes/minor-change-log.md" \
     --out-of-scope "no governance policy changes" \
-    --versioning "PATCH expected (documentation hygiene only)" \
+    --versioning "SemVer PATCH expected (documentation hygiene only)" \
     --governance "minor log updated; handover baseline synchronized" \
     --validation "manual doc review + helper command checks"
   pr-helper.sh pr-merge
@@ -322,26 +322,26 @@ run_doctor() {
   local version_bump_detected="false"
   if minor_log_version_bump_detected; then
     version_bump_detected="true"
-    doctor_warn "version bump detected in $MINOR_LOG_PATH"
+    doctor_warn "SemVer version bump detected in $MINOR_LOG_PATH"
   else
-    doctor_pass "no version bump detected in $MINOR_LOG_PATH"
+    doctor_pass "no SemVer version bump detected in $MINOR_LOG_PATH"
   fi
 
   if [[ -n "$planned_tag" || "$version_bump_detected" == "true" ]]; then
     if file_is_modified_or_staged "$HANDOVER_PATH"; then
-      doctor_pass "version/tag governance ($MODE_LABEL): $HANDOVER_PATH is modified"
+      doctor_pass "SemVer/tag governance ($MODE_LABEL): $HANDOVER_PATH is modified"
     else
       if [[ -n "$planned_tag" ]]; then
-        doctor_fail "planned tag '$planned_tag' requires $HANDOVER_PATH modification ($MODE_LABEL)"
+        doctor_fail "planned SemVer tag '$planned_tag' requires $HANDOVER_PATH modification ($MODE_LABEL)"
       else
-        doctor_fail "detected version bump requires $HANDOVER_PATH modification ($MODE_LABEL)"
+        doctor_fail "detected SemVer version bump requires $HANDOVER_PATH modification ($MODE_LABEL)"
       fi
     fi
     if [[ -f "$BASELINE_PATH" ]]; then
       if file_is_modified_or_staged "$BASELINE_PATH"; then
-        doctor_pass "version/tag context ($MODE_LABEL): $BASELINE_PATH is modified"
+        doctor_pass "SemVer/tag context ($MODE_LABEL): $BASELINE_PATH is modified"
       else
-        doctor_warn "version/tag context ($MODE_LABEL): $BASELINE_PATH not modified"
+        doctor_warn "SemVer/tag context ($MODE_LABEL): $BASELINE_PATH not modified"
       fi
     fi
   else

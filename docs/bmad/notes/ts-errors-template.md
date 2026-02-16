@@ -10,9 +10,9 @@
 
 ## 1) Summary
 - Total errors observed: `<number>`
-- Estimated MINOR fixes: `<number>`
+- Estimated Minor Change (workflow) fixes: `<number>`
 - Estimated BMAD-TRIGGER fixes: `<number>`
-- Recommended next step: `<minor-fix-pass | start-bmad-feature | mixed>`
+- Recommended next step: `<minor-change-fix-pass | start-bmad-feature | mixed>`
 
 ## 2) Error Entries
 Repeat this block per error cluster.
@@ -23,13 +23,13 @@ Repeat this block per error cluster.
 - Line/Column: `<line:column>`
 - Message (short): `<compiler-message>`
 - Context (short): `<what the code is doing>`
-- Classification: `<MINOR | BMAD-TRIGGER>`
+- Classification: `<Minor Change (workflow) | BMAD-TRIGGER>`
 - Rationale: `<why this classification>`
 - Fix direction (non-implementing): `<high-level approach>`
 - Risk if unchanged: `<low|medium|high>`
 
 ## 3) Classification Notes
-### MINOR indicators
+### Minor Change (workflow) indicators
 - Type narrowing/guards missing
 - Local type mismatch without behavior change
 - Generic or import typing inconsistency

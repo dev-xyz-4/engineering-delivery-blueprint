@@ -43,6 +43,9 @@ Use when the change is classified as a **Minor Change**.
 
 minor(<type>): <short description>
 
+Note:
+- `minor(...)` is a workflow/commit prefix and is **not** a SemVer `MINOR` classification.
+
 Allowed `<type>` values:
 - bugfix
 - refactor

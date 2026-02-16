@@ -25,7 +25,10 @@ Rules:
 - Do not introduce new features or architecture.
 - Do not refactor unrelated files.
 - Preserve behavior outside this fix.
-- Append a mandatory entry to the canonical Minor Change log according to the active mode (see CODEX_ENTRY.md).
+- Use `Minor Change (workflow)` terminology for workflow classification.
+- `Minor Change (workflow)` is not the same as `SemVer MINOR`.
+- Declare an explicit version decision: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` / `no SemVer change`.
+- Append a mandatory entry to the canonical Minor Change (workflow) log according to the active mode (see CODEX_ENTRY.md).
 - If version changes or governance baseline changes, update the canonical chat-handover document according to the active mode (see CODEX_ENTRY.md).
 - If repository structure or workflow templates are affected, update:
   - docs/bmad/notes/LLM-bmad-briefing-template.md (Repro structure / Feature status sections) as needed.
@@ -42,7 +45,8 @@ Validation:
 - <validation-step-1>
 - <validation-step-2>
 - <regression-check-1>
-- The canonical Minor Change log (per active mode) contains a new log entry.
+- Explicit version decision is documented as `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` / `no SemVer change`.
+- The canonical Minor Change (workflow) log (per active mode) contains a new log entry.
 - Required governance documents updated if applicable.
 
 ```

@@ -89,24 +89,24 @@ Local cleanup required after merge:
 
 Semantic Versioning strictly applied:
 
-MAJOR  
+SemVer MAJOR  
 → Structural or architectural change
 
-MINOR  
+SemVer MINOR  
 → Governance expansion (new guides, new templates)
 
-PATCH  
+SemVer PATCH  
 → Documentation hygiene, log corrections, formatting fixes
 
 Tags are authoritative.
-Releases optional for PATCH, recommended for MINOR+.
+Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 
 ---
 
 # 5. Current Repository State
 
 Latest Tag:
-v1.11.12
+v1.11.13
 
 Governance Baseline Includes:
 
@@ -139,6 +139,7 @@ Governance Baseline Includes:
 - PR helper doctor strengthened with governance PASS/WARN/FAIL validation checks
 - PR helper commit corrected to staged-only behavior with explicit unstaged/no-staged failure conditions
 - PR_HELPER_GUIDE clarified staged-only prerequisites and explicit doctor exit semantics
+- Terminology separation clarified: Minor Change (workflow) vs SemVer PATCH/MINOR/MAJOR
 - Branch protection enabled
 - PR-based workflow verified
 - Self-history/template separation for handover, baseline, and minor-change log

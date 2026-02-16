@@ -130,7 +130,7 @@ Checks performed:
 - Verifies mode target files are present.
 - For `--workflow minor-change`:
   - Verifies mode-specific minor-change log is modified/staged.
-- If `--tag` is provided or a version bump is detected in the mode-specific log:
+- If `--tag` is provided or a SemVer version bump is detected in the mode-specific log:
   - Verifies mode-specific chat-handover document is modified.
   - Evaluates mode-specific engineering baseline document (warning-level if unchanged).
 
@@ -165,7 +165,7 @@ PR title format:
 - `<type>(<scope>): <summary>`
 
 Examples:
-- `docs(governance): align handover baseline with latest minor log`
+- `docs(governance): align handover baseline with latest minor change log (workflow)`
 - `chore(quality): make PR metadata deterministic in pr-helper`
 - `feat(pr-helper): add deterministic squash metadata flow`
 
@@ -201,7 +201,7 @@ scripts/quality/pr-helper.sh pr-create \
   --rationale "prevent drift between handover protocol and minor-change log" \
   --files "docs/engineering/chat-handover-protocol.md,docs/bmad/notes/minor-change-log.md" \
   --out-of-scope "no governance policy changes" \
-  --versioning "PATCH expected: documentation hygiene" \
+  --versioning "SemVer PATCH expected: documentation hygiene" \
   --governance "minor log and handover updates included" \
   --validation "manual review + helper guardrail checks"
 
@@ -239,7 +239,7 @@ scripts/quality/pr-helper.sh pr-create \
   --rationale "execute approved BMAD deliver specification" \
   --files "src/...,docs/bmad/features/data-export/04-deliver.md" \
   --out-of-scope "no unrelated architecture changes" \
-  --versioning "MINOR expected if new behavior is introduced" \
+  --versioning "SemVer MINOR expected if new behavior is introduced" \
   --governance "deliver/spec alignment verified" \
   --validation "tests + review checklist complete"
 
@@ -301,8 +301,8 @@ Resolution:
 Error patterns:
 - `FAIL: minor-change workflow (Project Mode): docs/bmad/notes/minor-change-log.md is not modified/staged`
 - `FAIL: minor-change workflow (EDB Mode): docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md is not modified/staged`
-- `FAIL: planned tag ... requires <mode-specific chat-handover path> modification`
-- `FAIL: detected version bump requires <mode-specific chat-handover path> modification`
+- `FAIL: planned SemVer tag ... requires <mode-specific chat-handover path> modification`
+- `FAIL: detected SemVer version bump requires <mode-specific chat-handover path> modification`
 
 Resolution:
 - Update required governance documents before `pr-create`.
