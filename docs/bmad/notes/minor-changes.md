@@ -163,6 +163,8 @@ Use this section to record changes in chronological order.
 | v1.11.6 | 2026-02-15 | minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Backfilled missing v1.3.1 PR reference field with explicit historical N/A annotation. | #<PR> |
 | v1.11.7 | 2026-02-15 | ENGINEERING_BASELINE.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Finalized Phase-1 Engineering Governance Baseline declaration alignment and versioned governance handover state. | #<PR> |
 | v1.11.8 | 2026-02-16 | README.md, ENGINEERING_BASELINE.md, docs/_edb-history/ADR-0001-identity.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Formalized repository identity as Engineering Delivery Blueprint (EDB) and linked identity ADR from baseline/handover context. | #<PR> |
+| v1.11.9 | 2026-02-16 | README.md, minor-changes.md, CHAT_HANDOVER_PROTOCOL.md | Refined README positioning to explicitly highlight CODEX-driven workflow framing under Engineering Delivery Blueprint (EDB) identity. | #<PR> |
+
 
 
 
