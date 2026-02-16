@@ -25,7 +25,7 @@ Run an audit script (`ts:audit:*`) when at least one of the following applies:
   - dataflow/mapping logic (`<mapping-layer>`)
   - history/transaction logic (`<history-layer>`)
 - Uncertainty whether the fix:
-  - is only type narrowing (**Minor**)
+  - is only type narrowing (**Minor Change (workflow)**)
   - or implies a new contract (**BMAD**)
 
 ---
@@ -37,7 +37,7 @@ An audit produces a Markdown protocol containing:
 - file + line/column
 - code context
 - classification:
-  - `MINOR`
+  - `Minor Change (workflow)`
   - `BMAD-TRIGGER`
 - short rationale
 - fix direction (non-implementing)
@@ -58,7 +58,7 @@ When adopting this routine in another repository:
 
 ## Classification Rules (Short Form)
 
-### MINOR
+### Minor Change (workflow)
 - null / undefined guards
 - union narrowing
 - event, ref, hook types
@@ -95,7 +95,7 @@ Recommended naming:
 - `npm run typecheck` is green
 - audit run and evaluated if applicable
 - all remaining errors are consciously:
-  - fixed (Minor)
+  - fixed (Minor Change (workflow))
   - or documented (BMAD / deferred)
 
 ---

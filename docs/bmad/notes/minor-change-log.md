@@ -119,8 +119,7 @@ The PR MUST:
 
 Minor Changes typically do not receive a new release version.
 
-If needed due to external dependency or cross-repo reference, a patch
-tag MAY be created (e.g., vX.Y.Z).
+If needed due to external dependency or cross-repo reference, a SemVer PATCH tag MAY be created (e.g., vX.Y.Z).
 
 ------------------------------------------------------------------------
 

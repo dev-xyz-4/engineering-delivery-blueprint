@@ -96,6 +96,10 @@ For tasks classified as Minor Change:
 - keep changes local and reversible
 - use downstream live docs for workflow routing; treat `docs/_edb-development-history/` as blueprint-only history
 
+Terminology separation:
+- `Minor Change` refers to workflow classification.
+- `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` refer to version classification.
+
 ---
 
 ## 7) Stop Behavior

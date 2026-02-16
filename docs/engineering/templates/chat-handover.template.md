@@ -91,17 +91,17 @@ Local cleanup required after merge:
 
 Semantic Versioning strictly applied:
 
-MAJOR  
+SemVer MAJOR  
 → Structural or architectural change
 
-MINOR  
+SemVer MINOR  
 → Governance expansion (new guides, new templates)
 
-PATCH  
+SemVer PATCH  
 → Documentation hygiene, log corrections, formatting fixes
 
 Tags are authoritative.
-Releases optional for PATCH, recommended for MINOR+.
+Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 
 ---
 

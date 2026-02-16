@@ -72,7 +72,10 @@ Rules (strict):
 - Do not add architecture decisions not documented in BMAD artifacts.
 - Do not refactor unrelated code.
 - Do not degrade performance characteristics defined in deliver acceptance criteria.
-- Append a mandatory entry to the canonical Minor Change log according to the active mode (see CODEX_ENTRY.md) for any Minor adjustments done as part of this implementation (docs/process hygiene only).
+- Use `Minor Change (workflow)` terminology for workflow classification.
+- `Minor Change (workflow)` is not the same as `SemVer MINOR`.
+- Declare an explicit version decision: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` / `no SemVer change`.
+- Append a mandatory entry to the canonical Minor Change (workflow) log according to the active mode (see CODEX_ENTRY.md) for any Minor adjustments done as part of this implementation (docs/process hygiene only).
 - If version changes or governance baseline changes, update the canonical chat-handover document according to the active mode (see CODEX_ENTRY.md).
 - If repository structure or workflow templates are affected, update:
   - docs/bmad/notes/LLM-bmad-briefing-template.md (Repro structure / Feature status sections) as needed.
@@ -106,4 +109,3 @@ Proceed step-by-step.
 Do not widen scope.
 
 ```
-

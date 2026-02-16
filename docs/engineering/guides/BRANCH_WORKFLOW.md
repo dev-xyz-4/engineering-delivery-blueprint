@@ -51,7 +51,7 @@ scripts/quality/pr-helper.sh pr-create \
   --rationale "<why>" \
   --files "<file1,file2,...>" \
   --out-of-scope "<non-goals>" \
-  --versioning "PATCH expected" \
+  --versioning "SemVer PATCH expected" \
   --governance "<governance notes>" \
   --validation "<checks>"
 
