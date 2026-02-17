@@ -1,7 +1,7 @@
 # ENGINEERING GOVERNANCE BASELINE
 
 Generated on: 2026-02-15  
-Baseline Version: v1.11.7  
+Baseline Version: v1.12.0  
 
 ---
 
@@ -38,6 +38,7 @@ The Phase-1 Engineering Governance Baseline includes:
 - BRANCH_WORKFLOW
 - PR_HELPER_GUIDE
 - ADR template
+- ORCHESTRATION_INDEX (canonical startup map)
 
 All above components are formally versioned and aligned.
 
@@ -69,6 +70,13 @@ From v1.11.7 onward:
 - New governance guides require explicit justification.
 - Normative model changes require deliberate version classification.
 - Structural drift is not permitted without documented rationale.
+
+---
+
+## Phase 2
+
+Phase 2B note:
+- At v1.12.0, orchestration clarity was strengthened with a canonical startup map and ADR-backed authority boundary documentation.
 
 ---
 

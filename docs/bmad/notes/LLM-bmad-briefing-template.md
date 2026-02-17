@@ -34,6 +34,9 @@ docs/
     architecture-overview_EMPTY.md
     glossary_EMPTY.md
 
+  entry/
+    ORCHESTRATION_INDEX.md
+
   bmad/
     README.md
     guides/
@@ -95,6 +98,8 @@ docs/
 -   `CODEX_WORKFLOW_POLICY.md` is the only normative source for Codex
     behavior.
 -   `CODEX_ENTRY.md` acts as the router/entry point.
+-   `docs/entry/ORCHESTRATION_INDEX.md` is the canonical startup map for
+    authority boundaries (contextual, not normative).
 -   Minor Changes must be documented in
     `docs/bmad/notes/minor-change-log.md`.
 -   Minor Changes MUST append an entry to

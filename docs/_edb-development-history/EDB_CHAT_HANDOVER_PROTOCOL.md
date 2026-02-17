@@ -106,7 +106,7 @@ Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.11.14
+v1.12.0
 
 Governance Baseline Includes:
 
@@ -120,8 +120,10 @@ Governance Baseline Includes:
 - PERFORMANCE_GUIDE.md
 - OBSERVABILITY_SCOPE_GUIDE.md
 - GOVERNANCE_MODEL.md
+- ORCHESTRATION_INDEX.md
 - EDB_ENGINEERING_BASELINE.md
 - ADR-0001-identity.md (EDB identity declaration)
+- ADR-0002-orchestration-entrypoint-architecture.md
 - EDB_CHAT_HANDOVER_PROTOCOL.md
 - EDB_MINOR_CHANGE_LOG.md
 - BRANCH_WORKFLOW.md
@@ -141,6 +143,7 @@ Governance Baseline Includes:
 - PR_HELPER_GUIDE clarified staged-only prerequisites and explicit doctor exit semantics
 - Terminology separation clarified: Minor Change (workflow) vs SemVer PATCH/MINOR/MAJOR
 - BMAD implementation prompts require explicit SemVer Decision, rationale, planned tag, and decision-bound canonical log/handover updates via CODEX_ENTRY routing
+- Phase 2B hybrid orchestration model implemented (entry role layered on guides + canonical orchestration startup map)
 - Branch protection enabled
 - PR-based workflow verified
 - Self-history/template separation for handover, baseline, and minor-change log

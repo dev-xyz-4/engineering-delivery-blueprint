@@ -30,6 +30,7 @@ After reading the documents above:
 - Classify the task via `BMAD_DECISION_MATRIX.md`.
 - Follow `CODEX_WORKFLOW_POLICY.md` for process behavior.
 - Follow `BMAD_COMMIT_CONVENTIONS.md` for commit format and review expectations.
+- Use `docs/entry/ORCHESTRATION_INDEX.md` as the canonical startup map for authority boundaries and mode-aware context (non-normative helper).
 
 If classified as BMAD Feature:
 - Work in `docs/bmad/features/<feature-name>/`.
@@ -64,6 +65,7 @@ If no mode indicator is present, Project Mode applies.
 
 Guides and prompts route to downstream live documents.
 `docs/_edb-development-history/` is blueprint-only self-history.
+`docs/entry/ORCHESTRATION_INDEX.md` is a contextual orchestration map and does not replace policy authority.
 
 ---
 
