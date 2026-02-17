@@ -22,8 +22,7 @@ This document is descriptive, not normative.
 - Role: single normative source for Codex behavior.
 
 ### State snapshot artifacts
-- Project Mode: `docs/entry/chat-handover-protocol.md`, `docs/engineering/engineering-baseline.md`
-- EDB Mode: `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`, `docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md`
+- Live state artifacts are mode-dependent and routed by `docs/bmad/guides/CODEX_ENTRY.md`.
 - Role: operational/current-state transfer for new sessions.
 
 ### Reusable templates
@@ -53,18 +52,14 @@ This document is descriptive, not normative.
 ## Mode Safety
 
 ### Project Mode (default)
-- Live targets:
-  - `docs/bmad/notes/minor-change-log.md`
-  - `docs/entry/chat-handover-protocol.md`
-  - `docs/engineering/engineering-baseline.md`
+- Active by default for downstream projects.
+- Use mode-specific live targets defined in `docs/bmad/guides/CODEX_ENTRY.md`.
 
 ### EDB Mode
-- Live targets:
-  - `docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md`
-  - `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`
-  - `docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md`
+- Active only when explicitly enabled (`EDB_MODE=1` or `.planning/EDB_MODE`).
+- Use mode-specific live targets defined in `docs/bmad/guides/CODEX_ENTRY.md`.
 
-Do not mix write targets across modes.
+Do not mix write targets across modes; treat `CODEX_ENTRY.md` as the routing source of truth.
 
 ---
 

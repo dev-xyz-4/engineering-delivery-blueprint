@@ -8,6 +8,7 @@ For day-to-day usage, prefer the entry-surface document at `docs/entry/LLM-bmad-
 
 Use this briefing to start a new chat session with concise project context.
 It is interaction-focused and should remain lightweight.
+Mode-specific live write targets are defined in `docs/bmad/guides/CODEX_ENTRY.md` and should not be restated here.
 
 For authoritative routing and governance behavior, use:
 - `docs/bmad/guides/CODEX_ENTRY.md`

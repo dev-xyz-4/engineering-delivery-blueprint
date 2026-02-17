@@ -8,6 +8,7 @@ Use as a starting point for new projects/sessions.
 
 This document is a state snapshot for continuity between chat sessions.
 It should contain current project context, not policy definitions.
+Mode-specific live write targets are defined in `docs/bmad/guides/CODEX_ENTRY.md` and should not be restated here.
 
 For authoritative routing and governance behavior, use:
 - `docs/bmad/guides/CODEX_ENTRY.md`
