@@ -1,5 +1,9 @@
 # TypeScript Error Audit - Template
 
+Canonical scaffold template (non-authoritative).
+Not routing authority, not policy authority.
+For day-to-day startup context, prefer entry-surface docs under `docs/entry/`.
+
 ## 0) Meta
 - Date: `<YYYY-MM-DD>`
 - Scope: `<module-or-feature>`
