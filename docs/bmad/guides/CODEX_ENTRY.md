@@ -50,7 +50,7 @@ Used by downstream projects.
 
 Codex must write to:
 - `docs/bmad/notes/minor-change-log.md`
-- `docs/engineering/chat-handover-protocol.md`
+- `docs/entry/chat-handover-protocol.md`
 - `docs/engineering/engineering-baseline.md`
 
 ### EDB Mode (blueprint development only)

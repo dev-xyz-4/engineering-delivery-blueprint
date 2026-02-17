@@ -86,7 +86,7 @@ Rules (strict):
 - Always append a mandatory entry to the canonical Minor Change (workflow) log according to the active mode (see CODEX_ENTRY.md) for any Minor adjustments done as part of this implementation (docs/process hygiene only).
 - If planned tag is not `N/A` or the SemVer decision is not `no SemVer change`, update the canonical chat-handover document according to the active mode (see CODEX_ENTRY.md).
 - If repository structure or workflow templates are affected, update:
-  - docs/bmad/notes/LLM-bmad-briefing-template.md (Repro structure / Feature status sections) as needed.
+  - docs/entry/LLM-bmad-briefing.md (Repro structure / Feature status sections) as needed.
 
 Targets (only these files may change):
 - <target-file-1>

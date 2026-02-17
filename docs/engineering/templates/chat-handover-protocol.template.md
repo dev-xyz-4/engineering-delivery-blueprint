@@ -1,6 +1,6 @@
 # CHAT_HANDOVER_PROTOCOL TEMPLATE
 
-This is a template scaffold. Downstream projects should maintain the live document at `docs/engineering/chat-handover-protocol.md`.
+This is a template scaffold. Downstream projects should maintain the live document at `docs/entry/chat-handover-protocol.md`.
 
 ## Purpose
 

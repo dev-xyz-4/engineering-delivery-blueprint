@@ -105,7 +105,7 @@ docs/
 -   Minor Changes MUST append an entry to
     `docs/bmad/notes/minor-change-log.md`.
 -   If version or governance baseline changes,
-    `docs/engineering/chat-handover-protocol.md` must be updated.
+    `docs/entry/chat-handover-protocol.md` must be updated.
 -   New structure, new contracts, or new system decisions require a BMAD
     Feature process.
 

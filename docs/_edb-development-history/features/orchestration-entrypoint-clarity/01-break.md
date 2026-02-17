@@ -21,7 +21,7 @@
 ### Inputs
 - `docs/bmad/guides/CODEX_ENTRY.md`
 - `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`
-- `docs/bmad/notes/LLM-bmad-briefing-template.md`
+- `docs/entry/LLM-bmad-briefing.md`
 - Current folder layout across `docs/bmad/`, `docs/engineering/`, and `docs/_edb-development-history/`
 - Existing concern list for misplaced/overlapping artifacts (including `docs/bmad/notes/ts-errors-template.md`)
 

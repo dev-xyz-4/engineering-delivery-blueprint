@@ -137,5 +137,5 @@ Notes:
 ## References
 
 - `docs/engineering/guides/PR_HELPER_GUIDE.md`
-- `docs/engineering/chat-handover-protocol.md`
+- `docs/entry/chat-handover-protocol.md`
 - `docs/bmad/notes/minor-change-log.md`

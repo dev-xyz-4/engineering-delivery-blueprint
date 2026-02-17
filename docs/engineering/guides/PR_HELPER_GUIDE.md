@@ -116,7 +116,7 @@ scripts/quality/pr-helper.sh doctor --workflow minor-change --tag vX.Y.Z
   - Active when neither `EDB_MODE=1` nor `.planning/EDB_MODE` is present.
   - Targets:
     - `docs/bmad/notes/minor-change-log.md`
-    - `docs/engineering/chat-handover-protocol.md`
+    - `docs/entry/chat-handover-protocol.md`
     - `docs/engineering/engineering-baseline.md`
 
 - EDB Mode (blueprint development):
@@ -184,7 +184,7 @@ Notes:
 scripts/quality/pr-helper.sh branch --workflow minor-change --slug handover-baseline-sync
 
 # 2) Stage intended files
-git add docs/engineering/chat-handover-protocol.md docs/bmad/notes/minor-change-log.md
+git add docs/entry/chat-handover-protocol.md docs/bmad/notes/minor-change-log.md
 
 # 3) Commit (staged-only)
 scripts/quality/pr-helper.sh commit --workflow minor-change --subject "sync handover baseline"
@@ -199,7 +199,7 @@ scripts/quality/pr-helper.sh pr-create \
   --scope governance \
   --summary "align handover baseline with latest patch state" \
   --rationale "prevent drift between handover protocol and minor-change log" \
-  --files "docs/engineering/chat-handover-protocol.md,docs/bmad/notes/minor-change-log.md" \
+  --files "docs/entry/chat-handover-protocol.md,docs/bmad/notes/minor-change-log.md" \
   --out-of-scope "no governance policy changes" \
   --versioning "SemVer PATCH expected: documentation hygiene" \
   --governance "minor log and handover updates included" \
