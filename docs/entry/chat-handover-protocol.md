@@ -6,17 +6,13 @@ Use as a starting point for new projects/sessions.
 
 ## Purpose
 
-This document provides the minimal required context for continuing work in a new ChatGPT session without reloading full repository history.
+This document is a state snapshot for continuity between chat sessions.
+It should contain current project context, not policy definitions.
 
-It defines:
-
-- Repository structure
-- Governance model
-- Versioning discipline
-- Workflow rules
-- Current system state
-
-This file must be kept up to date when major governance milestones are reached.
+For authoritative routing and governance behavior, use:
+- `docs/bmad/guides/CODEX_ENTRY.md`
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
+- `docs/entry/ORCHESTRATION_INDEX.md`
 
 ---
 
@@ -48,66 +44,22 @@ Additionally:
 
 ---
 
-# 2. Governance Model
+# 2. Operating References
 
-## BMAD Feature Workflow
-Used for:
-- New features
-- Structural changes
-- New enforcement mechanisms
-- Architectural decisions
+Use links instead of duplicating governance text:
 
-## Minor Change Workflow
-Used for:
-- Documentation updates
-- Governance refinements
-- Template additions
-- Log hygiene
-- Placeholder removals
-
-Minor Changes MUST:
-- Go through PR
-- Append entry to <minor-change-log-path>
-- Not introduce architecture
-- Not expand feature scope
-
-Enforced in:
-- docs/bmad/guides/CODEX_WORKFLOW_POLICY.md
+- Routing and mode-aware targets:
+  `docs/bmad/guides/CODEX_ENTRY.md`
+- Policy and workflow behavior:
+  `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
+- Startup map and authority boundaries:
+  `docs/entry/ORCHESTRATION_INDEX.md`
+- Current session bootstrap:
+  `docs/entry/LLM-bmad-briefing.md`
 
 ---
 
-# 3. Branching & PR Discipline
-
-- main branch protected
-- All changes via Pull Request
-- Squash merge preferred
-- No direct commits to main
-
-Local cleanup required after merge:
-- Delete local branch
-- Delete remote branch if not auto-deleted
-
----
-
-# 4. Versioning Discipline
-
-Semantic Versioning strictly applied:
-
-SemVer MAJOR  
-→ Structural or architectural change
-
-SemVer MINOR 
-→ Governance expansion (new guides, new templates)
-
-SemVer PATCH  
-→ Documentation hygiene, log corrections, formatting fixes
-
-Tags are authoritative.
-Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
-
----
-
-# 5. Current Repository State
+# 3. Current Repository State
 
 Latest Tag:
 <latest-tag>
@@ -118,11 +70,13 @@ Governance Baseline Includes:
 - <baseline-item-2>
 - <baseline-item-3>
 
-Minor Change log is complete and enforced.
+Notes:
+- Keep this section factual and current.
+- Avoid adding governance rules here; link to authoritative docs instead.
 
 ---
 
-# 6. Current Focus
+# 4. Current Focus
 
 <UPDATE THIS SECTION BEFORE STARTING A NEW CHAT>
 
@@ -133,7 +87,7 @@ Example:
 
 ---
 
-# 7. Instructions for New Chat
+# 5. Instructions for New Chat
 
 When starting a new ChatGPT session:
 
@@ -143,11 +97,3 @@ When starting a new ChatGPT session:
    - Next target
    - Whether change is Minor or Feature
 3. Request template-conform BMAD prompt generation if applicable.
-
-No need to restate:
-- Branch protection rules
-- Versioning logic
-- Minor log requirement
-- Repository structure
-
-All governance rules are defined above.
