@@ -44,6 +44,8 @@ If classified as Minor Change:
 ## Mode-Aware Routing
 
 There are two operating modes:
+Routing targets depend on the active mode (Project Mode by default).
+Project Mode is the default behavior and requires no additional configuration.
 
 ### Project Mode (default)
 Used by downstream projects.

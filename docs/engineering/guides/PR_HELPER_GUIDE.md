@@ -111,6 +111,7 @@ scripts/quality/pr-helper.sh doctor --workflow minor-change --tag vX.Y.Z
 ### Mode-Aware Enforcement
 
 `doctor` resolves mode before governance checks:
+Project Mode is the default behavior and applies to all downstream users.
 
 - Project Mode (default):
   - Active when neither `EDB_MODE=1` nor `.planning/EDB_MODE` is present.
