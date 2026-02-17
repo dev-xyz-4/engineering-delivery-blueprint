@@ -1,7 +1,7 @@
 # Model — orchestration-entrypoint-clarity
 
 ## 1) System Overview (2–5 bullets)
-- The orchestration layer currently spans entry routing (`docs/bmad/guides/CODEX_ENTRY.md`), behavioral policy (`docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`), handover state (`docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`), and briefing/bootstrap artifacts (`docs/bmad/notes/LLM-bmad-briefing-template.md`).
+- The orchestration layer currently spans entry routing (`docs/bmad/guides/CODEX_ENTRY.md`), behavioral policy (`docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`), handover state (`docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`), and briefing/bootstrap artifacts (`docs/entry/LLM-bmad-briefing.md`).
 - Routing authority is normative through CODEX_ENTRY -> CODEX_WORKFLOW_POLICY, while contextual startup support is distributed across handover and briefing artifacts.
 - Artifact placement mixes reusable governance assets and blueprint self-history, requiring explicit category definitions and folder invariants to avoid cross-layer bleed.
 - Project Mode and EDB Mode share workflow semantics but target different canonical document paths, creating a boundary-sensitive orchestration model.

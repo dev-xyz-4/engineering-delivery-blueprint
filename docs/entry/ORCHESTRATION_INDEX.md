@@ -22,7 +22,7 @@ This document is descriptive, not normative.
 - Role: single normative source for Codex behavior.
 
 ### State snapshot artifacts
-- Project Mode: `docs/engineering/chat-handover-protocol.md`, `docs/engineering/engineering-baseline.md`
+- Project Mode: `docs/entry/chat-handover-protocol.md`, `docs/engineering/engineering-baseline.md`
 - EDB Mode: `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`, `docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md`
 - Role: operational/current-state transfer for new sessions.
 
@@ -32,7 +32,7 @@ This document is descriptive, not normative.
 - Role: reusable scaffolds, not authoritative policy or live state.
 
 ### Briefing template
-- `docs/bmad/notes/LLM-bmad-briefing-template.md`
+- `docs/entry/LLM-bmad-briefing.md`
 - Role: contextual briefing scaffold for session startup; not routing/policy authority.
 
 ---
@@ -55,7 +55,7 @@ This document is descriptive, not normative.
 ### Project Mode (default)
 - Live targets:
   - `docs/bmad/notes/minor-change-log.md`
-  - `docs/engineering/chat-handover-protocol.md`
+  - `docs/entry/chat-handover-protocol.md`
   - `docs/engineering/engineering-baseline.md`
 
 ### EDB Mode
