@@ -1,5 +1,9 @@
 # CHAT_HANDOVER_PROTOCOL
 
+Reusable project bootstrap scaffold (entry-surface placement for usability).
+Non-authoritative: not routing authority, not policy authority.
+Use as a starting point for new projects/sessions.
+
 ## Purpose
 
 This document provides the minimal required context for continuing work in a new ChatGPT session without reloading full repository history.

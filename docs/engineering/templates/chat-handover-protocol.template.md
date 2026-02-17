@@ -1,6 +1,8 @@
 # CHAT_HANDOVER_PROTOCOL TEMPLATE
 
-This is a template scaffold. Downstream projects should maintain the live document at `docs/entry/chat-handover-protocol.md`.
+Canonical backup template (non-authoritative).
+Not routing authority, not policy authority.
+For day-to-day usage, prefer the entry-surface document at `docs/entry/chat-handover-protocol.md`.
 
 ## Purpose
 

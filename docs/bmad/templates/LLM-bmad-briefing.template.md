@@ -1,8 +1,8 @@
 # BMAD LLM Briefing Template
 
-Reusable project bootstrap scaffold (entry-surface placement for usability).
-Non-authoritative: not routing authority, not policy authority.
-Use as a starting point for new projects/sessions.
+Canonical backup template (non-authoritative).
+Not routing authority, not policy authority.
+For day-to-day usage, prefer the entry-surface document at `docs/entry/LLM-bmad-briefing.md`.
 
 ## Usage
 
