@@ -97,3 +97,5 @@ When starting a new ChatGPT session:
    - Next target
    - Whether change is Minor or Feature
 3. Request template-conform BMAD prompt generation if applicable.
+
+Templates are maintained by copying from the corresponding entry document; do not edit templates independently.

@@ -49,3 +49,5 @@ Feature: `<feature-slug-2>`
 Status: `<planned|in-progress|implemented|stabilizing>`  
 Documentation: `<01-04 complete|partial|N/A>`  
 Open issues: `<none|summary>`
+
+Templates are maintained by copying from the corresponding entry document; do not edit templates independently.
