@@ -23,7 +23,7 @@
 - `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`
 - `docs/entry/LLM-bmad-briefing.md`
 - Current folder layout across `docs/bmad/`, `docs/engineering/`, and `docs/_edb-development-history/`
-- Existing concern list for misplaced/overlapping artifacts (including `docs/bmad/notes/ts-errors-template.md`)
+- Existing concern list for misplaced/overlapping artifacts (including `docs/bmad/templates/ts-errors.template.md`)
 
 ### Outputs
 - A scoped BREAK artifact that defines analysis boundaries for entrypoint clarity.
@@ -48,7 +48,7 @@
 - Should CODEX_ENTRY remain in `docs/bmad/guides/` or be conceptually mirrored by a higher-level entry index without changing authority?
 - What is the strict contract boundary between chat handover (state transfer) and briefing template (session bootstrap scaffold)?
 - Which artifact should be treated as canonical onboarding hub for new adopters vs maintainers?
-- Is `docs/bmad/notes/ts-errors-template.md` a legitimate notes artifact or a misplaced template candidate?
+- Is `docs/bmad/templates/ts-errors.template.md` a legitimate notes artifact or a misplaced template candidate?
 - Which folder invariants must be formally stated (notes vs templates vs guides vs history vs entry) before any move is proposed?
 
 ## 8) Success Criteria (high level)

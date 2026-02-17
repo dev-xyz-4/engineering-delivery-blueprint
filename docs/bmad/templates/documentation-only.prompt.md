@@ -1,5 +1,9 @@
 # Prompt-Template: Documentation-Only (Break)
 
+Prompt scaffold (non-authoritative).
+Not routing authority, not policy authority.
+For day-to-day startup context, prefer `docs/entry/LLM-bmad-briefing.md`.
+
 ```text
 Read docs/bmad/guides/CODEX_ENTRY.md.
 Follow the routing and rules defined there (including the referenced policy).
