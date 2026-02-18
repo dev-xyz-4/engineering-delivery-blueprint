@@ -1,3 +1,14 @@
+# VERSIONING POLICY (Normative Owner)
+
+This document is the sole normative source for versioning rule-topics in this repository.
+
+Authority rule:
+- Versioning obligations are defined only in this document.
+- `docs/engineering/guides/VERSIONING_GUIDE.md` is informational/reference-only.
+- If wording conflicts exist between documents, this file is authoritative for versioning.
+
+---
+
 ## Commit Hygiene
 
 Commit hygiene ensures repository integrity, traceability, and reproducibility.

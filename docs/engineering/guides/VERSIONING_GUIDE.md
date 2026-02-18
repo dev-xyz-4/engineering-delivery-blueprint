@@ -1,38 +1,51 @@
-# VERSIONING GUIDE
+# VERSIONING GUIDE (Informational)
 
 Generated on: 2026-02-14
+Last updated: 2026-02-18
+
+------------------------------------------------------------------------
+
+## Normative Ownership Boundary
+
+`docs/engineering/versioning.md` is the sole normative source for versioning rule-topics.
+
+This guide is reference-only:
+- It explains how to read and apply the versioning policy.
+- It does not define or override binding versioning rules.
+- It does not change BMAD workflow governance.
 
 ------------------------------------------------------------------------
 
 ## Purpose
 
-Define minimum versioning requirements depending on project type and distribution model.
+Provide explanatory orientation for versioning decisions by project context.
 
-This guide:
-- Defines scope-dependent requirements.
-- Does NOT define project-specific version rules (see docs/engineering/versioning.md).
-- Does NOT alter BMAD workflow rules.
+Use this guide for:
+- onboarding and interpretation support
+- examples of context signals to evaluate
+- quick navigation to the owner policy
 
-------------------------------------------------------------------------
-
-## Design Principle
-
-Versioning requirements scale with:
-
-- Distribution surface
-- External dependency exposure
-- User impact of breaking changes
-- Regulatory or financial sensitivity
-
-Avoid:
-- Overengineering for local/internal tools.
-- Underengineering for distributed/public systems.
+For binding decisions and final rule interpretation, consult:
+- `docs/engineering/versioning.md`
 
 ------------------------------------------------------------------------
 
-## Project Classification Matrix
+## Context Signals (Explanatory)
 
-The guide MUST define at least the following project types:
+Teams usually evaluate versioning strictness based on factors such as:
+- distribution surface
+- external dependency exposure
+- user impact of breaking changes
+- regulatory or financial sensitivity
+
+These signals are descriptive only. Rule authority remains in
+`docs/engineering/versioning.md`.
+
+------------------------------------------------------------------------
+
+## Typical Project Contexts (Examples)
+
+Common contexts used during policy interpretation:
 
 1. Local Tool (private use)
 2. Internal Tool (team use)
@@ -41,77 +54,34 @@ The guide MUST define at least the following project types:
 5. API / SDK
 6. Web3 / Financial-Sensitive Application
 
-------------------------------------------------------------------------
-
-## Versioning Requirement Matrix
-
-Provide a table with the following columns:
-
-| Project Type | Semantic Versioning Required | Git Tags Required | Public Release Required | Changelog Required | Breaking Change Policy Required | CI Version Enforcement Required |
-|---|---|---|---|---|---|---|
-| Local Tool (private use) | SHOULD | MAY | NOT REQUIRED | MAY | MAY | NOT REQUIRED |
-| Internal Tool (team use) | SHOULD | SHOULD | MAY | SHOULD | SHOULD | MAY |
-| Desktop Application (distributed binary) | MUST | MUST | SHOULD | MUST | MUST | SHOULD |
-| Public Web Application | MUST | SHOULD | SHOULD | MUST | MUST | SHOULD |
-| API / SDK | MUST | MUST | MUST | MUST | MUST | MUST |
-| Web3 / Financial-Sensitive Application | MUST | MUST | MUST | MUST | MUST | MUST |
-
-Each row MUST specify whether the requirement is:
-- MUST
-- SHOULD
-- MAY
-- NOT REQUIRED
-
-## Applicability Rule
-
-If a project matches multiple classifications, the strictest requirement level MUST apply.
+These categories are examples for discussion and documentation quality.
+They are not an independent normative matrix in this guide.
 
 ------------------------------------------------------------------------
 
-## Requirement Definitions
+## Practical Use Pattern
 
-Define what each requirement means:
+When classifying a change:
+- use this guide to frame the context
+- resolve obligations and final classification in `docs/engineering/versioning.md`
+- keep workflow classification separate from SemVer classification
 
-### Semantic Versioning
-- MUST follow MAJOR.MINOR.PATCH structure.
-- MAJOR increment is mandatory for breaking contract/interface changes.
-- MINOR increment is mandatory for backward-compatible feature additions.
-- PATCH increment is sufficient for backward-compatible fixes and documentation hygiene updates.
-
-### Git Tags
-- Tags MUST match version numbers.
-- Tags MUST be immutable once published.
-
-### Public Release
-- Required for distributed artifacts.
-- Optional for internal/private systems.
-
-### Changelog
-- MUST describe breaking changes explicitly.
-- SHOULD summarize feature additions.
-- MAY omit trivial documentation-only patches (if internal tool).
-
-### Breaking Change Policy
-- MUST explicitly document contract changes.
-- MUST reference migration guidance if external users exist.
-
-### CI Version Enforcement
-- MUST ensure version consistency if distributed.
-- MAY be omitted for private/local tools.
+Namespace reminder:
+- Workflow classification: `Minor Change (workflow)` / `BMAD Feature`
+- Version classification: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`
 
 ------------------------------------------------------------------------
 
 ## Governance Boundary
 
-This guide:
-
-- MUST NOT override project-level decisions documented in:
-  docs/engineering/versioning.md
-- MUST NOT introduce release automation workflows.
-- MUST NOT modify BMAD Feature governance.
+This guide does not:
+- define binding versioning requirements
+- define SemVer ownership
+- introduce release automation workflows
+- modify BMAD Feature governance
 
 ------------------------------------------------------------------------
 
 ## Version
 
-Initial baseline established at v1.0.0.
+Informational-only baseline aligned to the single-owner contract.

@@ -106,7 +106,7 @@ Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.12.8
+v1.12.9
 
 Governance Baseline Includes:
 
@@ -147,6 +147,7 @@ Governance Baseline Includes:
 - Branch protection enabled
 - PR-based workflow verified
 - Self-history/template separation for handover, baseline, and minor-change log
+- Versioning authority contract enforcement: `docs/engineering/versioning.md` is explicit sole normative owner and `docs/engineering/guides/VERSIONING_GUIDE.md` is informational-only
 
 Minor Change log is complete and enforced.
 
