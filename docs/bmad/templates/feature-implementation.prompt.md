@@ -23,14 +23,14 @@ Problem:
 - <problem-point-2>
 - <problem-point-3>
 
-SemVer Decision (required):
+SemVer Decision (capture):
 - SemVer Decision: `<SemVer PATCH | SemVer MINOR | SemVer MAJOR | no SemVer change>`
 - Rationale:
   - `<rationale-point-1>`
   - `<rationale-point-2>`
 - Planned tag: `<vX.Y.Z | N/A>`
 
-Expected behavior (binding):
+Expected behavior (from deliver contract):
 
 A) <contract-block-a>
 - <rule-a1>
@@ -77,20 +77,15 @@ H) Non-Regression Guarantees
   - <protected-area-3>
 - <additional-non-regression-rule>
 
-Rules (strict):
-- Do not introduce behavior not present in `04-deliver.md`.
-- Do not introduce hidden scope expansion.
-- Do not add architecture decisions not documented in BMAD artifacts.
-- Do not refactor unrelated code.
-- Do not degrade performance characteristics defined in deliver acceptance criteria.
-- Use `Minor Change (workflow)` terminology for workflow classification.
-- `Minor Change (workflow)` is not the same as `SemVer MINOR`.
-- Namespace clarifier: workflow classification uses `Minor Change (workflow)` / `BMAD Feature`; version classification uses `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`.
-- Declare an explicit version decision: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR` / `no SemVer change`.
-- Always append a mandatory entry to the canonical Minor Change (workflow) log according to the active mode (see CODEX_ENTRY.md) for any Minor adjustments done as part of this implementation (docs/process hygiene only).
-- If planned tag is not `N/A` or the SemVer decision is not `no SemVer change`, update the canonical chat-handover document according to the active mode (see CODEX_ENTRY.md).
-- If repository structure or workflow templates are affected, update:
-  - docs/entry/LLM-bmad-briefing.md (Repro structure / Feature status sections) as needed.
+Policy references:
+- Workflow governance and implementation constraints:
+  - docs/bmad/guides/CODEX_WORKFLOW_POLICY.md
+- Versioning and SemVer ownership:
+  - docs/engineering/versioning.md
+
+Namespace clarifier:
+- workflow classification uses `Minor Change (workflow)` / `BMAD Feature`
+- version classification uses `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`
 
 Targets (only these files may change):
 - <target-file-1>
@@ -101,7 +96,7 @@ Non-targets:
 - <non-target-path-1>
 - <non-target-path-2>
 
-Validation (must pass):
+Validation checks:
 - <typecheck-command>
 - <build-or-test-command>
 
@@ -112,10 +107,11 @@ Functional validation matrix:
 - <regression-check-1>
 - <regression-check-2>
 
-If any requirement is unclear:
-Stop implementation.
-Write clarification request to:
-- docs/bmad/features/<feature-slug>/questions.md
+Clarification handling:
+- If requirements are unclear, follow:
+  - docs/bmad/guides/CODEX_WORKFLOW_POLICY.md
+- Write clarification request to:
+  - docs/bmad/features/<feature-slug>/questions.md
 
 Proceed step-by-step.
 Do not widen scope.

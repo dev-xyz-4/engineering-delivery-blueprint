@@ -13,7 +13,7 @@
 
 ## 1) Scope
 
-### Goal (must be delivered)
+### Goal (target outcome)
 - 
 
 ### Non-Goals (explicitly out of scope)
@@ -28,23 +28,25 @@
 
 ---
 
-## 2) Implementation Rules (Codex Contract)
+## 2) Implementation Notes (Reference)
 
-### Allowed
-- Implement only what is listed in this Deliver Spec.
-- Refactor only where required to complete the spec.
-- Add small helper functions if necessary, but keep them local and minimal.
+Use this section to capture implementation boundaries for the feature.
+This template does not define workflow policy.
 
-### Not Allowed
-- Do not add new features.
-- Do not broaden scope beyond this document.
-- Do not change public APIs unless explicitly stated below.
-- Do not invent missing requirements or defaults.
+For implementation behavior, stop behavior, and execution gates, see:
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
 
-### If Information Is Missing
-- Stop implementation.
-- Write missing items into `questions.md` (same feature folder).
-- Propose 1–2 options in `03-analyze.md` (or reference it) and wait for decision.
+For versioning and SemVer ownership, see:
+- `docs/engineering/versioning.md`
+
+Suggested capture prompts:
+- In-scope implementation notes:
+- Out-of-scope notes:
+- Missing-information handling notes (reference `questions.md`):
+
+Namespace reminder:
+- Workflow classification: `Minor Change (workflow)` / `BMAD Feature`
+- Version classification: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`
 
 ---
 
@@ -73,13 +75,13 @@ Describe final API as it should exist after implementation.
 ## 5) Data Model / State (if any)
 - Entities:
 - Persistence (if any):
-- Invariants (must always hold):
+- Invariants (target-state constraints):
 - Edge cases:
 
 ---
 
 ## 6) Implementation Plan (ordered)
-Write as a strict sequence. Each step should be checkable.
+Write as an ordered sequence. Each step should be checkable.
 
 1. 
 2. 
@@ -111,4 +113,3 @@ Must be objective and testable.
 - Feature flags:
 - Migration steps:
 - Revert steps:
-

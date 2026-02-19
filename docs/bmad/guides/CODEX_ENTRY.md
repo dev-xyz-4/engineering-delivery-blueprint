@@ -1,14 +1,13 @@
 # CODEX Entry
 
-This document is the **single entry point** for using Codex in this repository.
-All Codex-assisted work must start here.
+This document is the routing entry point for using Codex in this repository.
+It provides startup sequence and owner-document links.
 
 ---
 
-## Mandatory Reading Order
+## Recommended Reading Order
 
-Codex must read these documents before starting any task.
-The authoritative rules for Codex behavior are defined in
+For authoritative Codex behavior rules, refer to
 `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`.
 
 Reading order:
@@ -19,7 +18,9 @@ Reading order:
 4. `docs/bmad/guides/BMAD_COMMIT_CONVENTIONS.md`
 5. `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
 
-These documents define the process, classification, and commit discipline.
+This sequence provides operational context.
+Binding process behavior is owned by
+`docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`.
 
 ---
 
@@ -36,7 +37,7 @@ If classified as BMAD Feature:
 - Work in `docs/bmad/features/<feature-name>/`.
 
 If classified as Minor Change:
-- Update the canonical Minor Change log according to the active mode (see Mode-Aware Routing below).
+- Route log updates via the active mode target (see Mode-Aware Routing below and owner policy).
 
 
 ---
@@ -50,7 +51,7 @@ Project Mode is the default behavior and requires no additional configuration.
 ### Project Mode (default)
 Used by downstream projects.
 
-Codex must write to:
+Use these canonical targets:
 - `docs/bmad/notes/minor-change-log.md`
 - `docs/entry/chat-handover-protocol.md`
 - `docs/engineering/engineering-baseline.md`
@@ -58,7 +59,7 @@ Codex must write to:
 ### EDB Mode (blueprint development only)
 Activated when .planning/EDB_MODE exists locally (gitignored) or EDB_MODE=1 is set.
 
-Codex must write to:
+Use these canonical targets:
 - `docs/_edb-development-history/EDB_MINOR_CHANGE_LOG.md`
 - `docs/_edb-development-history/EDB_CHAT_HANDOVER_PROTOCOL.md`
 - `docs/_edb-development-history/EDB_ENGINEERING_BASELINE.md`
@@ -69,12 +70,17 @@ Guides and prompts route to downstream live documents.
 `docs/_edb-development-history/` is blueprint-only self-history.
 `docs/entry/ORCHESTRATION_INDEX.md` is a contextual orchestration map and does not replace policy authority.
 
+Versioning and SemVer ownership route to:
+- `docs/engineering/versioning.md`
+
+Namespace reminder:
+- Workflow classification: `Minor Change (workflow)` / `BMAD Feature`
+- Version classification: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`
+
 ---
 
-## Final Rule
+## Authority Note
 
-> ENTRY routes to the governing documents.  
-> Codex behavior rules live exclusively in  
-> `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`.
->  
-> The Decision Matrix provides classification only.
+This file is routing-only.
+For binding behavior, classification enforcement, and stop rules, see:
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`

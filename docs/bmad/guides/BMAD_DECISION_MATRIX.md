@@ -2,6 +2,7 @@
 **BMAD Feature vs. Minor Change**
 
 Use this page **before writing code or prompting Codex**.
+It is a routing aid for task classification.
 
 ---
 
@@ -12,15 +13,16 @@ Use this page **before writing code or prompting Codex**.
 - [ ] Yes → **BMAD Feature**
 - [ ] No  → **Minor Change**
 
-If unsure → treat as **BMAD Feature**.
+If unsure, refer to:
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
 
 ---
 
-## Step 2 — Classification Rules
+## Step 2 — Classification Guidance
 
 ### BMAD Feature (use B/M/A/D)
 
-Choose **BMAD Feature** if **any** of the following is true:
+Common indicators:
 
 - Introduces a new concept, abstraction, or workflow
 - Adds or changes public APIs
@@ -41,7 +43,7 @@ docs/bmad/features/<feature-name>/
 
 ### Minor Change (no BMAD)
 
-Choose **Minor Change** if **all** of the following are true:
+Common indicators:
 
 - No new concepts or abstractions
 - No architectural decisions
@@ -54,14 +56,10 @@ docs/bmad/notes/minor-change-log.md
 
 ---
 
-## Step 3 — Forbidden Combinations
+## Step 3 — Policy Routing
 
-The following are **not allowed**:
-
-- ❌ Minor Change that silently introduces new structure
-- ❌ BMAD Feature without `04-deliver.md`
-- ❌ Implementing first, documenting later
-- ❌ Letting Codex guess missing requirements
+Binding constraints and forbidden combinations are defined in:
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
 
 ---
 
@@ -74,9 +72,11 @@ see `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`.
 
 ---
 
-## Final Rule
+## Authority Note
 
-> **BMAD is for decisions.  
-> Minor Changes are for execution.**
+For versioning and SemVer ownership, refer to:
+- `docs/engineering/versioning.md`
 
-When in doubt: **BMAD Feature**.
+Namespace reminder:
+- Workflow classification: `Minor Change (workflow)` / `BMAD Feature`
+- Version classification: `SemVer PATCH` / `SemVer MINOR` / `SemVer MAJOR`
