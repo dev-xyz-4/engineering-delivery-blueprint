@@ -31,29 +31,27 @@ Avoid:
 
 ------------------------------------------------------------------------
 
-## Project Classification Matrix
+## Project Classification Reference
 
-The guide MUST define at least the following project types:
+Use canonical project-type terminology from:
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md`
 
-1. Local Tool (private use)
-2. Internal Tool (team use)
-3. Desktop Application (distributed binary)
-4. Public Web Application
-5. API / SDK
-6. Web3 / Financial-Sensitive Application
+This guide applies release requirements by canonical type and does not redefine taxonomy.
 
 ------------------------------------------------------------------------
 
 ## Release Requirement Matrix
 
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+
 | Project Type | Git Tags Required | GitHub Releases Required | Release Notes Required | Artifact Publishing Required | CI/CD Release Automation Required |
 |---|---|---|---|---|---|
-| Local Tool (private use) | MAY | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED |
-| Internal Tool (team use) | SHOULD | MAY | SHOULD | MAY | MAY |
-| Desktop Application (distributed binary) | MUST | SHOULD | MUST | MUST | SHOULD |
-| Public Web Application | SHOULD | SHOULD | MUST | SHOULD | SHOULD |
-| API / SDK | MUST | MUST | MUST | MUST | MUST |
-| Web3 / Financial-Sensitive Application | MUST | MUST | MUST | MUST | MUST |
+| Project Type 1 | MAY | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED |
+| Project Type 2 | SHOULD | MAY | SHOULD | MAY | MAY |
+| Project Type 3 | MUST | SHOULD | MUST | MUST | SHOULD |
+| Project Type 4 | SHOULD | SHOULD | MUST | SHOULD | SHOULD |
+| Project Type 5 | MUST | MUST | MUST | MUST | MUST |
+| Project Type 6 | MUST | MUST | MUST | MUST | MUST |
 
 Each cell MUST use exactly one of:
 - MUST
