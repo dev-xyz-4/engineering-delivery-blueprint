@@ -66,8 +66,8 @@ Each cell MUST use exactly one of:
 ## Requirement Definitions
 
 ### Git Tags
-- Tags identify authoritative released versions.
-- Tags MUST align with version numbers.
+- Tags are release markers used in release operations.
+- For versioning semantics and authority, refer to docs/engineering/versioning.md.
 - Tags SHOULD be applied only after merge/release readiness checks.
 
 ### GitHub Releases
@@ -98,7 +98,7 @@ This guide:
 
 - MUST NOT override project-level decisions documented in:
   docs/engineering/release.md
-- MUST NOT change versioning semantics; `docs/engineering/guides/VERSIONING_GUIDE.md` remains authoritative for SemVer.
+- MUST NOT change versioning semantics; `docs/engineering/versioning.md` is authoritative for SemVer.
 - MUST NOT introduce release automation workflows.
 - MUST NOT introduce new enforcement mechanisms.
 - MUST NOT modify BMAD Feature governance.
