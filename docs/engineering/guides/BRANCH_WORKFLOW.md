@@ -14,7 +14,7 @@ This SOP is operational and concise. It complements existing governance guides a
 - Always create a branch before making changes.
 - Use PR-only workflow.
 - Use squash merge for PR integration.
-- Treat tags as authoritative version markers.
+- Use tags as operational markers; for version semantics, refer to docs/engineering/versioning.md.
 
 ---
 
