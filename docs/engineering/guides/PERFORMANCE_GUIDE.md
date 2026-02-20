@@ -32,16 +32,12 @@ Avoid:
 
 ------------------------------------------------------------------------
 
-## Project Classification Matrix
+## Project Classification Reference
 
-The guide MUST define at least the following project types:
+Use canonical project-type terminology from:
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md`
 
-1. Local Tool (private use)
-2. Internal Tool (team use)
-3. Desktop Application (distributed binary)
-4. Public Web Application
-5. API / SDK
-6. Web3 / Financial-Sensitive Application
+This guide applies performance requirements by canonical type and does not redefine taxonomy.
 
 ------------------------------------------------------------------------
 
@@ -84,14 +80,16 @@ The guide MUST include at minimum these dimensions:
 
 Provide a table with the following columns:
 
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+
 | Project Type | Targets/Budgets Required | Profiling Required | Benchmarking Required | Load/Stress Testing Required | Runtime Monitoring Required | Regression Prevention Required |
 |---|---|---|---|---|---|---|
-| Local Tool (private use) | MAY | MAY | MAY | NOT REQUIRED | NOT REQUIRED | MAY |
-| Internal Tool (team use) | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
-| Desktop Application (distributed binary) | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
-| Public Web Application | MUST | MUST | SHOULD | MUST | MUST | MUST |
-| API / SDK | MUST | MUST | MUST | MUST | MUST | MUST |
-| Web3 / Financial-Sensitive Application | MUST | MUST | MUST | MUST | MUST | MUST |
+| Project Type 1 | MAY | MAY | MAY | NOT REQUIRED | NOT REQUIRED | MAY |
+| Project Type 2 | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
+| Project Type 3 | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
+| Project Type 4 | MUST | MUST | SHOULD | MUST | MUST | MUST |
+| Project Type 5 | MUST | MUST | MUST | MUST | MUST | MUST |
+| Project Type 6 | MUST | MUST | MUST | MUST | MUST | MUST |
 
 Each cell MUST use exactly one of:
 - MUST

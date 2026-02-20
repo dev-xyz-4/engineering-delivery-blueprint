@@ -106,7 +106,7 @@ Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.12.15
+v1.12.16
 
 Governance Baseline Includes:
 
@@ -150,6 +150,7 @@ Governance Baseline Includes:
 - Versioning authority contract enforcement: `docs/engineering/versioning.md` is explicit sole normative owner and `docs/engineering/guides/VERSIONING_GUIDE.md` is informational-only
 - Core governance kernel refactor consolidation (C2-C5): routing docs are delegation-only, minor-change logs are historical-only, templates are structural/reference-only, and non-owner artifacts delegate governance authority to `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md` and `docs/engineering/versioning.md`
 - Phase-2C release boundary refactor (minimal wording-level): `RELEASE_GUIDE.md` removed local versioning-owner assertions and now delegates SemVer authority to `docs/engineering/versioning.md` while preserving release-domain matrix/criteria structure
+- Phase-2D project-classification refactor (wording-level): non-owner guides/templates removed local taxonomy duplication and now delegate canonical project-type authority to `docs/engineering/guides/PROJECT_CLASSIFICATION.md` without changing workflow or SemVer ownership
 
 Minor Change log is complete and enforced.
 

@@ -45,17 +45,11 @@ These signals are descriptive only. Rule authority remains in
 
 ## Typical Project Contexts (Examples)
 
-Common contexts used during policy interpretation:
+For canonical project-type taxonomy, refer to:
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md`
 
-1. Local Tool (private use)
-2. Internal Tool (team use)
-3. Desktop Application (distributed binary)
-4. Public Web Application
-5. API / SDK
-6. Web3 / Financial-Sensitive Application
-
-These categories are examples for discussion and documentation quality.
-They are not an independent normative matrix in this guide.
+Use those canonical terms when documenting context examples for versioning interpretation.
+This guide does not define project-type taxonomy.
 
 ------------------------------------------------------------------------
 

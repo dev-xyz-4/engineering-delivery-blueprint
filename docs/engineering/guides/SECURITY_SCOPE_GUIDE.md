@@ -29,12 +29,10 @@ If multiple project types apply, use the higher-risk type.
 
 Use canonical terminology from `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
-Use the closest primary project type:
+Use the closest primary project type from the canonical taxonomy owner:
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md`
 
-- `Local Tool`: local-only utility with no external user exposure.
-- `Desktop Application`: distributed client application, limited remote surface.
-- `Public Web Application`: internet-facing application with user traffic.
-- `Web3 / Financial-Sensitive Application`: systems with blockchain integrations, financial transactions, or regulatory-sensitive operations.
+This guide does not redefine project-type taxonomy.
 
 ---
 
@@ -63,12 +61,14 @@ All control categories apply at all levels; depth varies by level.
 
 ### Baseline Mapping By Project Type
 
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+
 | Project Type | Default Level |
 |---|---|
-| Local Tool | Minimal |
-| Desktop Application | Standard |
-| Public Web Application | Standard |
-| Web3 / Financial-Sensitive Application | Extended |
+| Project Type 1 | Minimal |
+| Project Type 2 | Standard |
+| Project Type 3 | Standard |
+| Project Type 4 | Extended |
 
 Escalate above default when triggers in Requirement Definitions are present.
 

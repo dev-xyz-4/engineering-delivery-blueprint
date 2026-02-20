@@ -12,7 +12,7 @@ Do not include CI setup, tooling configuration, or enforcement logic.
 
 ## 1) Classification
 
-- Project type: `<Local Tool|Desktop Application|Public Web Application|Web3 / Financial-Sensitive Application>`
+- Project type: `<canonical project type from docs/engineering/guides/PROJECT_CLASSIFICATION.md>`
 - Selected testing level: `<Minimal|Standard|Extended>`
 - Rationale: `<why this level is appropriate>`
 - Escalation triggers considered:
