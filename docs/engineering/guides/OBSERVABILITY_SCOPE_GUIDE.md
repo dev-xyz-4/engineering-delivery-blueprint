@@ -80,6 +80,9 @@ The guide MUST include at minimum these dimensions:
 ## Observability Requirement Matrix
 
 Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
+Matrix reading aid:
+- `Type Alpha` to `Type Zeta` are abstract row labels for scan-reading this matrix.
+- Canonical project-type meanings are defined in `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
 | Project Type | Signals Coverage Required | Alerting & On-call Readiness Required | Incident Response Readiness Required | Ownership & Tagging Governance Required | Retention & Cost Governance Required | Dashboards & Operational Views Required | Regression / Change Tracking Required |
 |---|---|---|---|---|---|---|---|

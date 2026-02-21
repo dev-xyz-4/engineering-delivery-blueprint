@@ -106,7 +106,7 @@ Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.12.18
+v1.12.19
 
 Governance Baseline Includes:
 
@@ -158,13 +158,8 @@ Minor Change log is complete and enforced.
 
 # 6. Current Focus
 
-<UPDATE THIS SECTION BEFORE STARTING A NEW CHAT>
-
-Example:
-- Introduce VERSIONING_GUIDE
-- Introduce release.template.md
-- Expand ADR governance
-- Define CI minimal governance layer
+- Phase 3 PR1: improve matrix scan-readability across non-owner guides using navigational reading aids only.
+- Preserve authority boundaries: no taxonomy duplication and no workflow/versioning owner changes.
 
 ---
 

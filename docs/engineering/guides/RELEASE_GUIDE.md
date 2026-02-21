@@ -43,6 +43,9 @@ This guide applies release requirements by canonical type and does not redefine 
 ## Release Requirement Matrix
 
 Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
+Matrix reading aid:
+- `Type Alpha` to `Type Zeta` are abstract row labels for scan-reading this matrix.
+- Canonical project-type meanings are defined in `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
 | Project Type | Git Tags Required | GitHub Releases Required | Release Notes Required | Artifact Publishing Required | CI/CD Release Automation Required |
 |---|---|---|---|---|---|
