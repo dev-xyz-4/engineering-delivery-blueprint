@@ -1,25 +1,23 @@
 # ENGINEERING GOVERNANCE BASELINE
 
-Generated on: <YYYY-MM-DD>  
-Baseline Version: <vX.Y.Z>  
+Generated on: 2026-02-21  
+Baseline Version: v1.12.18  
 
 ---
 
 ## Phase 1 — Engineering Layer Structurally Complete
 
-As of <vX.Y.Z>, the Engineering Layer of this repository is declared **Phase 1 Complete**.
+As of v1.12.18, the Engineering Layer of this repository is declared **Phase 1 Complete**.
 
 Repository identity reference:
-- `<identity-adr-path>`
+- `docs/_edb-development-history/ADR-0001-identity.md`
 
 This declaration confirms that:
 
-- All declared governance dimensions are formally defined.
-- Scope guides are structurally consistent.
-- Normative models are explicitly defined and interoperable.
-- Governance boundaries are harmonized.
-- Terminology is standardized.
-- No structural gaps remain in declared baseline scope.
+- All declared engineering governance dimensions are documented.
+- Scope guides are structurally aligned.
+- Owner-boundary references are present for workflow, versioning, and classification.
+- Governance terminology and section framing are synchronized to the current baseline.
 
 ---
 
@@ -27,12 +25,20 @@ This declaration confirms that:
 
 The Phase-1 Engineering Governance Baseline includes:
 
-- <dimension-1>
-- <dimension-2>
-- <dimension-3>
-- <dimension-4>
+- `docs/engineering/versioning.md`
+- `docs/engineering/guides/VERSIONING_GUIDE.md` (informational)
+- `docs/engineering/guides/RELEASE_GUIDE.md`
+- `docs/engineering/guides/BRANCH_WORKFLOW.md`
+- `docs/engineering/guides/SECURITY_SCOPE_GUIDE.md`
+- `docs/engineering/guides/TESTING_SCOPE_GUIDE.md`
+- `docs/engineering/guides/PERFORMANCE_GUIDE.md`
+- `docs/engineering/guides/OBSERVABILITY_SCOPE_GUIDE.md`
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md`
+- `docs/engineering/guides/GOVERNANCE_MODEL.md`
+- `docs/engineering/guides/PR_HELPER_GUIDE.md`
+- `docs/entry/ORCHESTRATION_INDEX.md`
 
-All above components are formally versioned and aligned.
+All above components are versioned repository artifacts.
 
 ---
 
@@ -43,7 +49,7 @@ Phase 1 Complete means:
 - The Engineering Layer is structurally coherent.
 - Governance dimensions are baseline-defined.
 - No declared governance dimension is structurally missing.
-- Expansion is now intentional, not gap-driven.
+- Expansion is treated as an explicit follow-up activity.
 
 Phase 1 does NOT mean:
 
@@ -51,20 +57,22 @@ Phase 1 does NOT mean:
 - No additional guides may be introduced.
 - No future refinements are expected.
 
-Future changes are considered controlled expansions or refinements.
+Future changes are tracked through versioned documentation updates.
 
 ---
 
 ## Governance Stability Commitment
 
-From <vX.Y.Z> onward:
+From v1.12.18 onward, this baseline is maintained as an operational snapshot.
+Normative behavior ownership remains defined in:
 
-- New governance guides require explicit justification.
-- Normative model changes require deliberate version classification.
-- Structural drift is not permitted without documented rationale.
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md` (workflow)
+- `docs/engineering/versioning.md` (versioning)
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md` (classification)
 
 ---
 
 ## Version
 
-Initial baseline declaration established at <vX.Y.Z>.
+Initial baseline declaration established at v1.11.7.  
+Current synchronized baseline: v1.12.18.

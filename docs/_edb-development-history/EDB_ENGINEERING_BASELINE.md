@@ -1,13 +1,13 @@
 # ENGINEERING GOVERNANCE BASELINE
 
-Generated on: 2026-02-15  
-Baseline Version: v1.12.0  
+Generated on: 2026-02-21  
+Baseline Version: v1.12.18  
 
 ---
 
 ## Phase 1 — Engineering Layer Structurally Complete
 
-As of v1.11.7, the Engineering Layer of this repository is declared **Phase 1 Complete**.
+As of v1.12.18, the Engineering Layer of this repository is declared **Phase 1 Complete**.
 
 Repository identity reference:
 - `docs/_edb-development-history/ADR-0001-identity.md`
@@ -40,7 +40,7 @@ The Phase-1 Engineering Governance Baseline includes:
 - ADR template
 - ORCHESTRATION_INDEX (canonical startup map)
 
-All above components are formally versioned and aligned.
+All above components are versioned and tracked in repository history.
 
 ---
 
@@ -65,21 +65,22 @@ Future changes are considered controlled expansions or refinements.
 
 ## Governance Stability Commitment
 
-From v1.11.7 onward:
-
-- New governance guides require explicit justification.
-- Normative model changes require deliberate version classification.
-- Structural drift is not permitted without documented rationale.
+From v1.12.18 onward, this document records the historical baseline snapshot.
+For binding workflow behavior and policy ownership, refer to:
+- `docs/bmad/guides/CODEX_WORKFLOW_POLICY.md`
+- `docs/engineering/versioning.md`
+- `docs/engineering/guides/PROJECT_CLASSIFICATION.md`
 
 ---
 
 ## Phase 2
 
-Phase 2B note:
-- At v1.12.0, orchestration clarity was strengthened with a canonical startup map and ADR-backed authority boundary documentation.
+Phase 2 note:
+- Through v1.12.18, lifecycle boundary harmonization artifacts were synchronized in EDB history and live engineering guides.
 
 ---
 
 ## Version
 
-Initial baseline declaration established at v1.11.7.
+Initial baseline declaration established at v1.11.7.  
+Historical snapshot synchronized at v1.12.18.
