@@ -10,7 +10,7 @@ Define minimum observability governance requirements depending on project type a
 
 This guide:
 - Defines scope-dependent requirements.
-- Does NOT define project-specific observability targets (see docs/engineering/observability.md).
+- Does NOT define project-specific observability targets (see `docs/engineering/observability.md`).
 - Does NOT alter BMAD workflow rules.
 - Avoids tool mandates and avoids hard numeric thresholds.
 
@@ -174,7 +174,7 @@ Dimension-specific practical meaning and evidence:
 This guide:
 
 - MUST NOT override project-level decisions documented in:
-  docs/engineering/observability.md
+  `docs/engineering/observability.md`
 - MUST NOT introduce new workflows or enforcement mechanisms.
 - MUST NOT specify tools or numeric thresholds.
 - MUST NOT modify BMAD Feature governance.

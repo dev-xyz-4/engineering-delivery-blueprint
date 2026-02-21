@@ -11,7 +11,7 @@ Define minimum release requirements depending on project type and distribution m
 This guide:
 - Defines scope-dependent requirements.
 - Distinguishes release dimensions (tags, GitHub Releases, release notes, artifacts, automation).
-- Does NOT define project-specific release rules (see docs/engineering/release.md).
+- Does NOT define project-specific release rules (see `docs/engineering/release.md`).
 - Does NOT alter BMAD workflow rules.
 
 ------------------------------------------------------------------------
@@ -98,7 +98,7 @@ Each cell MUST use exactly one of:
 This guide:
 
 - MUST NOT override project-level decisions documented in:
-  docs/engineering/release.md
+  `docs/engineering/release.md`
 - MUST NOT change versioning semantics; `docs/engineering/versioning.md` is authoritative for SemVer.
 - MUST NOT introduce release automation workflows.
 - MUST NOT introduce new enforcement mechanisms.

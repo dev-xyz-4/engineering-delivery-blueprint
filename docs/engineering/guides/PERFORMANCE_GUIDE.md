@@ -10,7 +10,7 @@ Define minimum performance governance requirements depending on project type and
 
 This guide:
 - Defines scope-dependent requirements.
-- Does NOT define project-specific performance targets (see docs/engineering/performance.md).
+- Does NOT define project-specific performance targets (see `docs/engineering/performance.md`).
 - Does NOT alter BMAD workflow rules.
 - Avoids tool mandates and avoids hard numeric thresholds.
 
@@ -168,7 +168,7 @@ Dimension-specific practical meaning and evidence:
 This guide:
 
 - MUST NOT override project-level decisions documented in:
-  docs/engineering/performance.md
+  `docs/engineering/performance.md`
 - MUST NOT introduce new workflows or enforcement mechanisms.
 - MUST NOT specify tools or numeric thresholds.
 - MUST NOT modify BMAD Feature governance.
