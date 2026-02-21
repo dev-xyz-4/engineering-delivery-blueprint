@@ -9,7 +9,8 @@ This template supports governance baseline consolidation leading to `v1.9.0`.
 ## ADR Header
 
 - ADR ID: `<adr-0001>`
-  - ADR IDs MUST be sequential and immutable once assigned.
+  - ADR IDs are typically sequential by convention and are usually kept immutable once assigned.
+  - If deviating, document the rationale in the ADR.
 - Title: `<short-decision-title>`
 - Date: `<YYYY-MM-DD>`
 - Status: `<Proposed | Accepted | Superseded | Rejected>`

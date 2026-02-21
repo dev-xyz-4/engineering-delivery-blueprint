@@ -42,16 +42,16 @@ This guide applies release requirements by canonical type and does not redefine 
 
 ## Release Requirement Matrix
 
-Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
 
 | Project Type | Git Tags Required | GitHub Releases Required | Release Notes Required | Artifact Publishing Required | CI/CD Release Automation Required |
 |---|---|---|---|---|---|
-| Project Type 1 | MAY | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED |
-| Project Type 2 | SHOULD | MAY | SHOULD | MAY | MAY |
-| Project Type 3 | MUST | SHOULD | MUST | MUST | SHOULD |
-| Project Type 4 | SHOULD | SHOULD | MUST | SHOULD | SHOULD |
-| Project Type 5 | MUST | MUST | MUST | MUST | MUST |
-| Project Type 6 | MUST | MUST | MUST | MUST | MUST |
+| Type Alpha | MAY | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED | NOT REQUIRED |
+| Type Beta | SHOULD | MAY | SHOULD | MAY | MAY |
+| Type Gamma | MUST | SHOULD | MUST | MUST | SHOULD |
+| Type Delta | SHOULD | SHOULD | MUST | SHOULD | SHOULD |
+| Type Epsilon | MUST | MUST | MUST | MUST | MUST |
+| Type Zeta | MUST | MUST | MUST | MUST | MUST |
 
 Each cell MUST use exactly one of:
 - MUST

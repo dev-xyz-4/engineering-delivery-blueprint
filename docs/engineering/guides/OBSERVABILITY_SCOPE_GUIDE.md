@@ -79,16 +79,16 @@ The guide MUST include at minimum these dimensions:
 
 ## Observability Requirement Matrix
 
-Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
 
 | Project Type | Signals Coverage Required | Alerting & On-call Readiness Required | Incident Response Readiness Required | Ownership & Tagging Governance Required | Retention & Cost Governance Required | Dashboards & Operational Views Required | Regression / Change Tracking Required |
 |---|---|---|---|---|---|---|---|
-| Project Type 1 | MAY | NOT REQUIRED | MAY | MAY | MAY | MAY | MAY |
-| Project Type 2 | SHOULD | MAY | SHOULD | SHOULD | SHOULD | SHOULD | SHOULD |
-| Project Type 3 | SHOULD | MAY | SHOULD | SHOULD | SHOULD | SHOULD | SHOULD |
-| Project Type 4 | MUST | MUST | MUST | MUST | MUST | MUST | MUST |
-| Project Type 5 | MUST | MUST | MUST | MUST | MUST | MUST | MUST |
-| Project Type 6 | MUST | MUST | MUST | MUST | MUST | MUST | MUST |
+| Type Alpha | MAY | NOT REQUIRED | MAY | MAY | MAY | MAY | MAY |
+| Type Beta | SHOULD | MAY | SHOULD | SHOULD | SHOULD | SHOULD | SHOULD |
+| Type Gamma | SHOULD | MAY | SHOULD | SHOULD | SHOULD | SHOULD | SHOULD |
+| Type Delta | MUST | MUST | MUST | MUST | MUST | MUST | MUST |
+| Type Epsilon | MUST | MUST | MUST | MUST | MUST | MUST | MUST |
+| Type Zeta | MUST | MUST | MUST | MUST | MUST | MUST | MUST |
 
 Each cell MUST use exactly one of:
 - MUST
