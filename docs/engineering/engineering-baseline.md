@@ -1,7 +1,7 @@
 # ENGINEERING GOVERNANCE BASELINE
 
 Generated on: 2026-02-21  
-Baseline Version: v1.12.21
+Baseline Version: v1.12.22
 
 ---
 
@@ -75,4 +75,4 @@ Normative behavior ownership remains defined in:
 ## Version
 
 Initial baseline declaration established at v1.11.7.  
-Current synchronized baseline: v1.12.21.
+Current synchronized baseline: v1.12.22.

@@ -106,7 +106,7 @@ Releases optional for SemVer PATCH, recommended for SemVer MINOR+.
 # 5. Current Repository State
 
 Latest Tag:
-v1.12.21
+v1.12.22
 
 Governance Baseline Includes:
 
@@ -158,8 +158,8 @@ Minor Change log is complete and enforced.
 
 # 6. Current Focus
 
-- Phase 3 PR3: cross-document link coherence across engineering guides with consistent path formatting and reference phrasing.
-- Preserve authority boundaries: delegation-only references, no taxonomy duplication, and no SemVer rule restatement.
+- Phase 3 PR4: UX polish and final consistency sweep across engineering guides (formatting and phrasing only).
+- Preserve authority boundaries: no taxonomy duplication, no SemVer rule restatement, and no governance logic changes.
 
 ---
 

@@ -81,8 +81,8 @@ The guide MUST include at minimum these dimensions:
 Provide a table with the following columns:
 
 For canonical project-type meanings, refer to `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
-Matrix reading aid:
-- `Type Alpha` to `Type Zeta` are abstract row labels for scan-reading this matrix.
+Matrix Reading Aid:
+- `Type Alpha` to `Type Zeta` are abstract row labels for matrix scan reading.
 - Canonical project-type meanings are defined in `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
 | Project Type | Targets/Budgets Required | Profiling Required | Benchmarking Required | Load/Stress Testing Required | Runtime Monitoring Required | Regression Prevention Required |

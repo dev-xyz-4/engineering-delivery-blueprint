@@ -62,8 +62,8 @@ All control categories apply at all levels; depth varies by level.
 ### Baseline Mapping By Project Type
 
 For canonical project-type meanings, refer to `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
-Matrix reading aid:
-- `Type Alpha` to `Type Delta` are abstract row labels for quick matrix scanning.
+Matrix Reading Aid:
+- `Type Alpha` to `Type Delta` are abstract row labels for matrix scan reading.
 - Canonical project-type meanings are defined in `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 
 | Project Type | Default Level |
