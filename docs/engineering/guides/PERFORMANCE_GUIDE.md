@@ -80,16 +80,16 @@ The guide MUST include at minimum these dimensions:
 
 Provide a table with the following columns:
 
-Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
 
 | Project Type | Targets/Budgets Required | Profiling Required | Benchmarking Required | Load/Stress Testing Required | Runtime Monitoring Required | Regression Prevention Required |
 |---|---|---|---|---|---|---|
-| Project Type 1 | MAY | MAY | MAY | NOT REQUIRED | NOT REQUIRED | MAY |
-| Project Type 2 | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
-| Project Type 3 | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
-| Project Type 4 | MUST | MUST | SHOULD | MUST | MUST | MUST |
-| Project Type 5 | MUST | MUST | MUST | MUST | MUST | MUST |
-| Project Type 6 | MUST | MUST | MUST | MUST | MUST | MUST |
+| Type Alpha | MAY | MAY | MAY | NOT REQUIRED | NOT REQUIRED | MAY |
+| Type Beta | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
+| Type Gamma | SHOULD | SHOULD | SHOULD | MAY | SHOULD | SHOULD |
+| Type Delta | MUST | MUST | SHOULD | MUST | MUST | MUST |
+| Type Epsilon | MUST | MUST | MUST | MUST | MUST | MUST |
+| Type Zeta | MUST | MUST | MUST | MUST | MUST | MUST |
 
 Each cell MUST use exactly one of:
 - MUST

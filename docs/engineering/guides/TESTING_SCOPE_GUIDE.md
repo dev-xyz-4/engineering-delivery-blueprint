@@ -61,14 +61,14 @@ All testing categories apply at all levels; depth varies by level.
 
 ### Baseline Mapping By Project Type
 
-Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md; matrix rows map to those types by reference.
+Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
 
 | Project Type | Default Level |
 |---|---|
-| Project Type 1 | Minimal |
-| Project Type 2 | Standard |
-| Project Type 3 | Standard |
-| Project Type 4 | Extended |
+| Type Alpha | Minimal |
+| Type Beta | Standard |
+| Type Gamma | Standard |
+| Type Delta | Extended |
 
 Escalate above default when triggers in Requirement Definitions are present.
 
