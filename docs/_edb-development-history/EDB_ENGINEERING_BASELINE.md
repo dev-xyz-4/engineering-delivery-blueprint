@@ -1,7 +1,7 @@
 # ENGINEERING GOVERNANCE BASELINE
 
 Generated on: 2026-02-21  
-Baseline Version: v1.12.19
+Baseline Version: v1.12.20
 
 ---
 
@@ -83,4 +83,4 @@ Phase 2 note:
 ## Version
 
 Initial baseline declaration established at v1.11.7.  
-Historical snapshot synchronized at v1.12.19.
+Historical snapshot synchronized at v1.12.20.

@@ -79,7 +79,7 @@ The guide MUST include at minimum these dimensions:
 
 ## Observability Requirement Matrix
 
-Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
+For canonical project-type meanings, refer to `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 Matrix reading aid:
 - `Type Alpha` to `Type Zeta` are abstract row labels for scan-reading this matrix.
 - Canonical project-type meanings are defined in `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.

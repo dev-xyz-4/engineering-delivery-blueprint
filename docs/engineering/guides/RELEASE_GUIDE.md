@@ -42,7 +42,7 @@ This guide applies release requirements by canonical type and does not redefine 
 
 ## Release Requirement Matrix
 
-Project types are defined in docs/engineering/guides/PROJECT_CLASSIFICATION.md.
+For canonical project-type meanings, refer to `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
 Matrix reading aid:
 - `Type Alpha` to `Type Zeta` are abstract row labels for scan-reading this matrix.
 - Canonical project-type meanings are defined in `docs/engineering/guides/PROJECT_CLASSIFICATION.md`.
@@ -68,7 +68,7 @@ Each cell MUST use exactly one of:
 
 ### Git Tags
 - Tags are release markers used in release operations.
-- For versioning semantics and authority, refer to docs/engineering/versioning.md.
+- For versioning semantics and authority, refer to `docs/engineering/versioning.md`.
 - Tags SHOULD be applied only after merge/release readiness checks.
 
 ### GitHub Releases
